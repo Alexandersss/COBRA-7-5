@@ -4,7 +4,7 @@
 #include <lv2/process.h>
 #include <lv2/thread.h>
 
-// STATIC HASH - COBRA 7.5 CEX 481
+// STATIC HASH - COBRA 7.5 CEX 481 FERROX
 
 #if defined(FIRMWARE_4_81)  // Ported by Habib and Update by Alexander's 10/01/2017
 
