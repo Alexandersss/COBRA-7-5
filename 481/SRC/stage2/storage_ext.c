@@ -25,7 +25,7 @@
 #include "modulespatch.h"
 
 
-//#define ps2emu_entry1_bc 0x165B44 
+//#define ps2emu_entry1_bc 0x165B44
 //#define ps2emu_entry2_bc 0x165CC0
 
 //#define ps2emu_entry1_semibc 0x165b40
@@ -125,6 +125,7 @@ static event_queue_t proxy_result_queue;
 
 static int discfd = -1;
 static int disc_emulation;
+static int emu_ps3_rec = 0;
 static int total_emulation;
 static int skip_emu_check = 0;
 static volatile int loop = 0;
@@ -1168,6 +1169,19 @@ int is_psx(int check_ps2)
 
 		if (result == 0)
 		{
+			// Check if it is a burned PS3 disk (deank)
+			if(check_ps2==3)
+			{
+				ret = (memcmp(buf+1, "CD001", 5) == 0 && memcmp(buf+0x28, "PS3VOLUME", 9) == 0);
+				if(!ret)
+				{
+					result = read_real_disc_sector(buf, 0x01, 1, 3);
+					ret = (memcmp(buf, "PlayStation3", 12) == 0);
+				}
+				page_free(NULL, buf, 0x2F);
+				return ret;
+			}
+
 			// Probably not the best way to say if a disc is psx...
 			ret = (memcmp(buf+1, "CD001", 5) == 0 && memcmp(buf+8, "PLAYSTATION ", 12) == 0);
 			if (ret && check_ps2)
@@ -1215,6 +1229,7 @@ void process_disc_insert(uint32_t disctype)
 	real_disctype = disctype;
 	effective_disctype = real_disctype;
 	fake_disctype = 0;
+	emu_ps3_rec = 0;
 	#ifdef DEBUG
 	DPRINTF("real disc type = %x\n", real_disctype);
 	#endif
@@ -1286,9 +1301,17 @@ void process_disc_insert(uint32_t disctype)
 			{
 				if (is_psx(0))
 				{
-					fake_disctype = effective_disctype = DEVICE_TYPE_PS2_DVD;
+					fake_disctype = effective_disctype =DEVICE_TYPE_PS2_DVD;
 				}
 			}
+
+			// PS3 DVD-R/BD-R support
+			if(real_disctype && real_disctype != DEVICE_TYPE_PS3_BD && fake_disctype == 0 && is_psx(3))
+			{
+				fake_disctype = effective_disctype = DEVICE_TYPE_PS3_BD;
+				emu_ps3_rec=1;
+			}
+
 		break;
 	}
 
@@ -2496,7 +2519,7 @@ LV2_HOOKED_FUNCTION_COND_POSTCALL_2(int, emu_disc_auth, (uint64_t func, uint64_t
 			return 0;
 		}
 
-		if (disc_emulation == EMU_PS3 && real_disctype != DEVICE_TYPE_PS3_BD)
+		if (( (emu_ps3_rec && disc_emulation == EMU_OFF) || disc_emulation == EMU_PS3) && real_disctype != DEVICE_TYPE_PS3_BD)
 		{
 			static int inloop = 0;
 
@@ -2533,6 +2556,7 @@ LV2_HOOKED_FUNCTION_PRECALL_SUCCESS_8(int, post_cellFsUtilMount, (const char *bl
 	//	update_hashes();
 
 		mutex_lock(mutex, 0);
+
 		if (real_disctype == 0)
 		{
 			unsigned int disctype = get_disc_type();
@@ -2546,6 +2570,7 @@ LV2_HOOKED_FUNCTION_PRECALL_SUCCESS_8(int, post_cellFsUtilMount, (const char *bl
 				process_disc_insert(disctype);
 			}
 		}
+
 		mutex_unlock(mutex);
 
 		#ifndef DEBUG
@@ -2612,7 +2637,7 @@ static INLINE void load_ps2emu_stage2(int emu_type)
 		DPRINTF("Failed to open ps2 stage2: %s\n", name);
 	}
 	#endif
-	
+
 	page_free(NULL, buf, 0x2F);
 }
 
@@ -3049,6 +3074,7 @@ static INLINE void do_umount_discfile(void)
 
 	disc_emulation = EMU_OFF;
 	total_emulation = 0;
+	emu_ps3_rec=0;
 }
 
 static INLINE int check_files_and_allocate(unsigned int filescount, char *files[])
