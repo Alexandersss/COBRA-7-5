@@ -197,17 +197,155 @@ int sys_map_paths(char *paths[], char *new_paths[], unsigned int num)
 	
 	return ret;
 }
+//////////////////////////////////////////////////////////////////////////////////////
+// KW - HOMEBREW BLOCKER SUPPORT CODE TO USE IN open_path_hook()
+//
+// Functions, global vars and directives are here to improve code readability
+// Le funzionalità, le variabili globali e le direttive sono qui per migliorare la lettura del codice
+//
+// declaration for read_text_line() which is defined in modulespatch.c after removal of the "static" declaration.
+// la dechiarazione per read_text_line() viene definita in modulepatch.c soltanto dopo aver rimosso la dichiarazione "static"
+int read_text_line(int fd, char *line, unsigned int size, int *eof);
+
+#define BLACKLIST_FILENAME "/dev_hdd0/tmp/blacklist.cfg"
+#define WHITELIST_FILENAME "/dev_hdd0/tmp/whitelist.cfg"
+#define MAX_LIST_ENTRIES 30 // Maximum elements for noth the custom blacklist and whitelist.
+
+static int __initialized_lists = 0; // Are the lists initialized ?
+static int __blacklist_entries = 0; // Module global var to hold the current blacklist entries.
+static char __blacklist[9*MAX_LIST_ENTRIES];
+static int __whitelist_entries = 0; // Module global var to hold the current whitelist entries.
+static char __whitelist[9*MAX_LIST_ENTRIES];
+
+
+//
+// init_list()
+//
+// inits a list.
+// returns the number of elements read from file
+
+static int init_list(char *list, char *path, int maxentries)
+	{
+		int loaded, f;
+
+		if (cellFsOpen(path, CELL_FS_O_RDONLY, &f, 0, NULL, 0) != 0)
+		return 0; // failed to open
+		loaded = 0;
+		while (loaded < maxentries)
+		{
+			char line[128];
+			int eof;
+			if (read_text_line(f, line, sizeof(line), &eof) > 0)
+			if (strlen(line) >=9) // avoid copying empty lines
+			{	
+				strncpy(list + (9*loaded), line, 9); // copy only the first 9 chars - if it has lees than 9, it will fail future checks. should correct in file.
+				loaded++;
+			}
+			if (eof)
+			break;
+		}
+		cellFsClose(f);
+		return loaded;
+	}
+
+
+//
+// listed()
+//
+// tests if a char gameid[9] is in the blacklist or whitelist
+// initialize the both lists, if not yet initialized;
+// receives the list to test blacklist (1) or whitelist (0), and the gameid
+// to initialize the lists, tries to read them from file BLACKLIST_FILENAME and WHITELIST_FILENAME
+//
+// prova se un gameid[9] è in blacklist o whitelist
+// inizializza entrambi gli elenchi, se non ancora inizializzati;
+// riceve l'elenco per testare la blacklist (1) o la whitelist (0) e il gameid
+// per inizializzare gli elenchi, prova a leggerli dal file BLACKLIST_FILENAME e WHITELIST_FILENAME
+
+static int listed(int blacklist, char *gameid)
+	{
+		char *list;
+		int i, elements;
+		if (!__initialized_lists)
+		{
+			// initialize the lists if not yet done
+			__blacklist_entries = init_list(__blacklist, BLACKLIST_FILENAME, MAX_LIST_ENTRIES);
+			__whitelist_entries = init_list(__whitelist, WHITELIST_FILENAME, MAX_LIST_ENTRIES);
+			__initialized_lists = 1;
+		}
+		if (blacklist)
+		{list = __blacklist; elements = __blacklist_entries;}
+		else
+		{list = __whitelist; elements = __whitelist_entries;}
+
+		for (i = 0; i < elements; i++)
+		if (!strncmp(list+(9*i),gameid, 9))
+		return 1; // gameid is in the list
+
+		// if it got here, it is not in the list. return 0
+		return 0;
+	}
+
+
+// BEGIN KW & AV block access to homebrews when syscalls are disabled
+// After the core tests it will test first if the gameid is in whitelist.cfg (superseeds previous tests)
+// In the it will test if the gameid is in blacklist.cfg (superseeds all previous tests)
+// ** WARNING ** This syscall disablement test assumes that the syscall table entry 6 (peek) was replaced by the original value (equals syscall 0 entry) as done by PSNPatch
+// ** WARNING ** If only a parcial disablement was made, this assumption WILL FAIL !!!
+//
+// Iniziato da KW & AV blocca l'accesso a homebrews quando le syscalls sono disabilitati
+// Dopo i test di base, verificherà innanzitutto se il gameid è in whitelist.cfg (test superiori precedenti)
+// Nel verificherà se il gameid è in blacklist.cfg (sostituisce tutti i test precedenti)
+// ** AVVERTENZA ** Questo test di disabilitazione delle syscall, presuppone che la voce di tabella syscall 6 (peek) sia stata sostituita dal valore originale (equivale alla voce syscall 0) come fatto da PSNPatch
+// ** AVVERTENZA ** Se è stata effettuata solo una disattivazione parziale, questa assunzione AVRA' ESITO NEGATIVO !!!
 
 LV2_HOOKED_FUNCTION_POSTCALL_2(void, open_path_hook, (char *path0, int mode))
 {
-	/*if(path0[7]=='v')// && map_table[0].newpath)
-	{
-		if(!map_table[0].newpath) map_table[0].newpath = alloc(0x400, 0x27);
-		strcpy(map_table[0].newpath, (char*)"/dev_hdd0/GAMES/BLES01674"); 
-		strcpy(map_table[0].newpath+25, path0+9);
-		DPRINTF(">: [%s]\n", map_table[0].newpath);
-		set_patched_func_param(1, (uint64_t)map_table[0].newpath);
-	}*/
+	int syscalls_disabled = ((*(uint64_t *)MKA(syscall_table_symbol + 8 * 6)) == (*(uint64_t *)MKA(syscall_table_symbol)));
+
+		if (syscalls_disabled && path0 && !strncmp(path0, "/dev_hdd0/game/", 15) && strstr(path0 + 15, "/EBOOT.BIN"))
+		{
+		// syscalls are disabled and an EBOOT.BIN is being called from hdd. Let's test it.
+		char *gameid = path0 + 15;
+
+		// flag "whitelist" id's
+		int allow =
+		!strncmp(gameid, "NP", 2) ||
+		!strncmp(gameid, "BL", 2) ||
+		!strncmp(gameid, "BC", 2) ||
+		!strncmp(gameid, "KOEI3", 5) ||
+		!strncmp(gameid, "KTGS3", 5) ||
+		!strncmp(gameid, "MRTC0", 5) ||
+		!strncmp(gameid, "ASIA0", 5) ||
+		!strncmp(gameid, "GUST0", 5) ;
+		;
+
+		// flag some "blacklist" id's
+		if (
+			!strncmp(gameid, "BLES806", 7) || // Multiman and assorted tools are in the format BLES806**
+			!strncmp(gameid, "BLJS10018", 9) || // PSNPatch Stealth (older versions were already detected as non-NP/BC/BL)
+			!strncmp(gameid, "BLES08890", 9) || // PSNope by user
+			!strncmp(gameid, "BLES13408", 9) || // FCEU NES Emulator
+			!strncmp(gameid, "BLES01337", 9) || // Awesome File Manager
+			!strncmp(gameid, "BLND00001", 9) || // dev_blind
+			!strncmp(gameid, "NPEA90124", 9) //|| // SEN Enabler
+			//!strcmp (path0, "/dev_bdvd/PS3_UPDATE/PS3UPDAT.PUP") //bluray disk updates
+			) allow = 0;
+
+			// test whitelist.cfg and blacklist.cfg
+			if (listed(0, gameid)) // whitelist.cfg test
+			allow = 1;
+			if (listed(1, gameid)) // blacklist.cfg test
+			allow = 0;
+		
+			// let's now block homebrews if the "allow" flag is false
+			if (!allow)
+			{
+				const char new_path[12] = "/no_exists";
+				set_patched_func_param(1, (uint64_t)new_path);
+				return;
+			}
+		}
 
 
 	if (path0[0]=='/')
