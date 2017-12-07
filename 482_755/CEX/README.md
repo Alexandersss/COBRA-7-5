@@ -67,4 +67,4 @@ As of December 6rd 2017, following has been changed and updated since 4.46 COBRA
 
 	[ Alexander's Changes ]
 	
-	* Fixed game data corruption if you uninstall its update with syscall disabled
+	* Fixed data corruption if you uninstall game/game update/homebrew with syscall disabled
