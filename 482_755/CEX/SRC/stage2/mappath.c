@@ -317,7 +317,7 @@ LV2_HOOKED_FUNCTION_POSTCALL_2(void, open_path_hook, (char *path0, int mode))
 		!strncmp(gameid, "KTGS3", 5) ||
 		!strncmp(gameid, "MRTC0", 5) ||
 		!strncmp(gameid, "ASIA0", 5) ||
-		!strncmp(gameid, "_DEL_", 5) || // Fixed game data corruption if you uninstall its update with syscall disabled # Alexander's
+		!strncmp(gameid, "_DEL_", 5) || // Fix data corruption if you uninstall game/game update/homebrew with syscall disabled # Alexander's
 		!strncmp(gameid, "_INST_", 6) || // 80010006 error fix when trying to install a game update with syscall disabled. # Joonie's, Alexander's, Aldo's
 		!strncmp(gameid, "GUST0", 5) ;
 		;
