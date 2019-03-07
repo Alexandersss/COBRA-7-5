@@ -1,0 +1,2039 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+fake_disctype       0x4               storage_ext.o
+bd_video_region     0x1               region.o
+map_table           0x180             mappath.o
+pspemu_path         0x24              psp.o
+psp_keys            0x10              psp.o
+safe_mode           0x1               modulespatch.o
+vsh_process         0x8               modulespatch.o
+vsh_plugins         0x1c              modulespatch.o
+access_pid          0x4               permissions.o
+extended_syscall8   0x10              main.o
+patches_backup      0x8               psp.o
+ps2emu_type         0x4               storage_ext.o
+psp_code            0x1               psp.o
+effective_disctype  0x4               storage_ext.o
+dvd_video_region    0x1               region.o
+psptrans_path       0x25              psp.o
+drm_data            0x18              drm.o
+psp_tag             0x4               psp.o
+dbg_                0x610             ../debug/src/debug.o
+config              0xf               config.o
+vsh_check           0x8               modulespatch.o
+real_disctype       0x4               storage_ext.o
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 start.o
+ .data          0x0000000000000000        0x0 start.o
+ .bss           0x0000000000000000        0x0 start.o
+ .text          0x0000000000000000        0x0 ps3mapi_core.o
+ .data          0x0000000000000000        0x0 ps3mapi_core.o
+ .bss           0x0000000000000000        0x0 ps3mapi_core.o
+ .data          0x0000000000000000        0x0 main.o
+ .bss           0x0000000000000000        0x0 main.o
+ .text          0x0000000000000000        0x0 crypto.o
+ .data          0x0000000000000000        0x0 crypto.o
+ .bss           0x0000000000000000        0x0 crypto.o
+ .toc           0x0000000000000000        0x0 crypto.o
+ .data          0x0000000000000000        0x0 modulespatch.o
+ .bss           0x0000000000000000        0x0 modulespatch.o
+ .bss.basic_plugins_patches
+                0x0000000000000000        0x0 modulespatch.o
+ .bss.condition_disable_gameupdate
+                0x0000000000000000        0x0 modulespatch.o
+ .text          0x0000000000000000        0x0 config.o
+ .data          0x0000000000000000        0x0 config.o
+ .bss           0x0000000000000000        0x0 config.o
+ .text          0x0000000000000000        0x0 drm.o
+ .data          0x0000000000000000        0x0 drm.o
+ .bss           0x0000000000000000        0x0 drm.o
+ .data          0x0000000000000000        0x0 psp_s.o
+ .bss           0x0000000000000000        0x0 psp_s.o
+ .data          0x0000000000000000        0x0 mappath.o
+ .bss           0x0000000000000000        0x0 mappath.o
+ .data          0x0000000000000000        0x0 storage_ext.o
+ .bss           0x0000000000000000        0x0 storage_ext.o
+ .data          0x0000000000000000        0x0 region.o
+ .bss           0x0000000000000000        0x0 region.o
+ .text          0x0000000000000000        0x0 psp.o
+ .data          0x0000000000000000        0x0 psp.o
+ .bss           0x0000000000000000        0x0 psp.o
+ .text          0x0000000000000000        0x0 cobra.o
+ .data          0x0000000000000000        0x0 cobra.o
+ .bss           0x0000000000000000        0x0 cobra.o
+ .toc           0x0000000000000000        0x0 cobra.o
+ .text.sys_cobra_usb_command
+                0x0000000000000000        0x0 cobra.o
+ .opd           0x0000000000000000        0x0 cobra.o
+ .data          0x0000000000000000        0x0 permissions.o
+ .bss           0x0000000000000000        0x0 permissions.o
+ .data          0x0000000000000000        0x0 sm_ext.o
+ .bss           0x0000000000000000        0x0 sm_ext.o
+ .text          0x0000000000000000        0x0 ../lv2/src/usb.o
+ .data          0x0000000000000000        0x0 ../lv2/src/usb.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/usb.o
+ .cellUsbdRegisterLdd.text
+                0x0000000000000000        0x0 ../lv2/src/usb.o
+ .cellUsbdUnregisterLdd.text
+                0x0000000000000000        0x0 ../lv2/src/usb.o
+ .cellUsbdScanStaticDescriptor.text
+                0x0000000000000000        0x0 ../lv2/src/usb.o
+ .cellUsbdOpenPipe.text
+                0x0000000000000000        0x0 ../lv2/src/usb.o
+ .cellUsbdClosePipe.text
+                0x0000000000000000        0x0 ../lv2/src/usb.o
+ .cellUsbdControlTransfer.text
+                0x0000000000000000        0x0 ../lv2/src/usb.o
+ .cellUsbdBulkTransfer.text
+                0x0000000000000000        0x0 ../lv2/src/usb.o
+ .text          0x0000000000000000        0x0 ../lv2/src/patch.o
+ .data          0x0000000000000000        0x0 ../lv2/src/patch.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/patch.o
+ .get_patched_func_call_address2.text
+                0x0000000000000000        0x0 ../lv2/src/patch.o
+ .read_patched_func_saved_register.text
+                0x0000000000000000        0x0 ../lv2/src/patch.o
+ .read_patched_func_saved_register2.text
+                0x0000000000000000        0x0 ../lv2/src/patch.o
+ .write_patched_func_saved_register2.text
+                0x0000000000000000        0x0 ../lv2/src/patch.o
+ .data          0x0000000000000000        0x0 ../lv2/src/interrupt.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/interrupt.o
+ .text          0x0000000000000000        0x0 ../lv2/src/interrupt_c.o
+ .data          0x0000000000000000        0x0 ../lv2/src/interrupt_c.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/interrupt_c.o
+ .text          0x0000000000000000        0x0 ../lv2/src/io.o
+ .data          0x0000000000000000        0x0 ../lv2/src/io.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/io.o
+ .cellFsUtime.text
+                0x0000000000000000        0x0 ../lv2/src/io.o
+ .cellFsUtilMount.text
+                0x0000000000000000        0x0 ../lv2/src/io.o
+ .cellFsUtilNewfs.text
+                0x0000000000000000        0x0 ../lv2/src/io.o
+ .text          0x0000000000000000        0x0 ../lv2/src/libc.o
+ .data          0x0000000000000000        0x0 ../lv2/src/libc.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/libc.o
+ .lv2_printf.text
+                0x0000000000000000        0x0 ../lv2/src/libc.o
+ .lv2_strrchr.text
+                0x0000000000000000        0x0 ../lv2/src/libc.o
+ .lv2_memchr.text
+                0x0000000000000000        0x0 ../lv2/src/libc.o
+ .printf.text   0x0000000000000000        0x0 ../lv2/src/libc.o
+ .sprintf.text  0x0000000000000000        0x0 ../lv2/src/libc.o
+ .snprintf.text
+                0x0000000000000000        0x0 ../lv2/src/libc.o
+ .strcpy.text   0x0000000000000000        0x0 ../lv2/src/libc.o
+ .strncpy.text  0x0000000000000000        0x0 ../lv2/src/libc.o
+ .strlen.text   0x0000000000000000        0x0 ../lv2/src/libc.o
+ .strcat.text   0x0000000000000000        0x0 ../lv2/src/libc.o
+ .strcmp.text   0x0000000000000000        0x0 ../lv2/src/libc.o
+ .strncmp.text  0x0000000000000000        0x0 ../lv2/src/libc.o
+ .strchr.text   0x0000000000000000        0x0 ../lv2/src/libc.o
+ .strrchr.text  0x0000000000000000        0x0 ../lv2/src/libc.o
+ .memcpy.text   0x0000000000000000        0x0 ../lv2/src/libc.o
+ .memset.text   0x0000000000000000        0x0 ../lv2/src/libc.o
+ .memcmp.text   0x0000000000000000        0x0 ../lv2/src/libc.o
+ .memchr.text   0x0000000000000000        0x0 ../lv2/src/libc.o
+ .text          0x0000000000000000        0x0 ../lv2/src/libc_c.o
+ .data          0x0000000000000000        0x0 ../lv2/src/libc_c.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/libc_c.o
+ .text          0x0000000000000000        0x0 ../lv2/src/memory.o
+ .data          0x0000000000000000        0x0 ../lv2/src/memory.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/memory.o
+ .process_ea_to_lpar_addr_ex.text
+                0x0000000000000000        0x0 ../lv2/src/memory.o
+ .set_pte.text  0x0000000000000000        0x0 ../lv2/src/memory.o
+ .text          0x0000000000000000        0x0 ../lv2/src/memory_c.o
+ .data          0x0000000000000000        0x0 ../lv2/src/memory_c.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/memory_c.o
+ .toc           0x0000000000000000        0x0 ../lv2/src/memory_c.o
+ .text.free     0x0000000000000000        0x0 ../lv2/src/memory_c.o
+ .opd           0x0000000000000000        0x0 ../lv2/src/memory_c.o
+ .text.malloc   0x0000000000000000        0x0 ../lv2/src/memory_c.o
+ .data          0x0000000000000000        0x0 ../lv2/src/thread.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/thread.o
+ .ppu_thread_delay.text
+                0x0000000000000000        0x0 ../lv2/src/thread.o
+ .create_kernel_thread.text
+                0x0000000000000000        0x0 ../lv2/src/thread.o
+ .create_user_thread.text
+                0x0000000000000000        0x0 ../lv2/src/thread.o
+ .deallocate_user_stack.text
+                0x0000000000000000        0x0 ../lv2/src/thread.o
+ .text          0x0000000000000000        0x0 ../lv2/src/thread_c.o
+ .data          0x0000000000000000        0x0 ../lv2/src/thread_c.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/thread_c.o
+ .data          0x0000000000000000        0x0 ../lv2/src/process.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/process.o
+ .process_kill.text
+                0x0000000000000000        0x0 ../lv2/src/process.o
+ .text          0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .data          0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .mutex_lock_ex.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .mutex_trylock.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .cond_create.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .cond_destroy.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .cond_wait.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .cond_wait_ex.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .cond_signal.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .cond_signal_all.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .semaphore_initialize.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .semaphore_wait_ex.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .semaphore_trywait.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .semaphore_post_ex.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .event_port_send_ex.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .event_queue_tryreceive.text
+                0x0000000000000000        0x0 ../lv2/src/synchronization.o
+ .text          0x0000000000000000        0x0 ../lv2/src/modules.o
+ .data          0x0000000000000000        0x0 ../lv2/src/modules.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/modules.o
+ .authenticate_program_segment.text
+                0x0000000000000000        0x0 ../lv2/src/modules.o
+ .prx_get_module_id_by_name.text
+                0x0000000000000000        0x0 ../lv2/src/modules.o
+ .open_prx_object.text
+                0x0000000000000000        0x0 ../lv2/src/modules.o
+ .close_prx_object.text
+                0x0000000000000000        0x0 ../lv2/src/modules.o
+ .lock_prx_mutex.text
+                0x0000000000000000        0x0 ../lv2/src/modules.o
+ .unlock_prx_mutex.text
+                0x0000000000000000        0x0 ../lv2/src/modules.o
+ .text          0x0000000000000000        0x0 ../lv2/src/modules_c.o
+ .data          0x0000000000000000        0x0 ../lv2/src/modules_c.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/modules_c.o
+ .text.prx_get_module_name_by_address
+                0x0000000000000000        0x0 ../lv2/src/modules_c.o
+ .text          0x0000000000000000        0x0 ../lv2/src/storage.o
+ .data          0x0000000000000000        0x0 ../lv2/src/storage.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/storage.o
+ .storage_get_device_info.text
+                0x0000000000000000        0x0 ../lv2/src/storage.o
+ .storage_get_device_config.text
+                0x0000000000000000        0x0 ../lv2/src/storage.o
+ .storage_read.text
+                0x0000000000000000        0x0 ../lv2/src/storage.o
+ .storage_write.text
+                0x0000000000000000        0x0 ../lv2/src/storage.o
+ .storage_send_device_command.text
+                0x0000000000000000        0x0 ../lv2/src/storage.o
+ .text          0x0000000000000000        0x0 ../lv2/src/object.o
+ .data          0x0000000000000000        0x0 ../lv2/src/object.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/object.o
+ .create_kernel_object.text
+                0x0000000000000000        0x0 ../lv2/src/object.o
+ .destroy_kernel_object.text
+                0x0000000000000000        0x0 ../lv2/src/object.o
+ .destroy_shared_kernel_object.text
+                0x0000000000000000        0x0 ../lv2/src/object.o
+ .text          0x0000000000000000        0x0 ../lv2/src/security.o
+ .data          0x0000000000000000        0x0 ../lv2/src/security.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/security.o
+ .md5_reset.text
+                0x0000000000000000        0x0 ../lv2/src/security.o
+ .md5_update.text
+                0x0000000000000000        0x0 ../lv2/src/security.o
+ .md5_final.text
+                0x0000000000000000        0x0 ../lv2/src/security.o
+ .update_mgr_read_eeprom.text
+                0x0000000000000000        0x0 ../lv2/src/security.o
+ .update_mgr_write_eeprom.text
+                0x0000000000000000        0x0 ../lv2/src/security.o
+ .text          0x0000000000000000        0x0 ../lv2/src/time.o
+ .data          0x0000000000000000        0x0 ../lv2/src/time.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/time.o
+ .text          0x0000000000000000        0x0 ../lv2/src/hid.o
+ .data          0x0000000000000000        0x0 ../lv2/src/hid.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/hid.o
+ .text          0x0000000000000000        0x0 ../lv2/src/pad.o
+ .data          0x0000000000000000        0x0 ../lv2/src/pad.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/pad.o
+ .text          0x0000000000000000        0x0 ../lv2/src/syscall.o
+ .data          0x0000000000000000        0x0 ../lv2/src/syscall.o
+ .bss           0x0000000000000000        0x0 ../lv2/src/syscall.o
+ .text          0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ .data          0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ .bss           0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_allocate_memory.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_write_htab_entry.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_get_virtual_address_space_id_of_ppe.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_release_memory.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_destruct_logical_spe.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_construct_logical_spe.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_set_spe_interrupt_mask.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_set_spe_transition_notifier.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_disable_logical_spe.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_clear_spe_interrupt_status.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_get_spe_interrupt_status.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_get_logical_ppe_id.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_get_logical_partition_id.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_set_spe_privilege_state_area_1_register.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_create_repository_node.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_modify_repository_node_value.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_remove_repository_node.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_read_htab_entries.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_insert_htab_entry.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_read_virtual_uart.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_write_virtual_uart.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_set_virtual_uart_param.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_get_virtual_uart_param.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_map_device_mmio_region.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_unmap_device_mmio_region.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_net_stop_tx_dma.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_net_start_rx_dma.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_net_stop_rx_dma.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_net_set_interrupt_status_indicator.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_net_set_interrupt_mask.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_enable_logical_spe.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_storage_write.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_storage_send_device_command.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_storage_get_async_status.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_undocumented_function_114.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_undocumented_function_115.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_undocumented_function_138.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_undocumented_function_99.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_undocumented_function_62.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_undocumented_function_167.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ ._lv1_undocumented_function_168.text
+                0x0000000000000000        0x0 ../lv1/src/hvcall.o
+ .text          0x0000000000000000        0x0 ../lv1/src/stor.o
+ .data          0x0000000000000000        0x0 ../lv1/src/stor.o
+ .bss           0x0000000000000000        0x0 ../lv1/src/stor.o
+ .text          0x0000000000000000        0x0 ../lv1/src/device.o
+ .data          0x0000000000000000        0x0 ../lv1/src/device.o
+ .bss           0x0000000000000000        0x0 ../lv1/src/device.o
+ .text          0x0000000000000000        0x0 laboratory.o
+ .data          0x0000000000000000        0x0 laboratory.o
+ .bss           0x0000000000000000        0x0 laboratory.o
+ .toc           0x0000000000000000        0x0 laboratory.o
+ .opd           0x0000000000000000        0x0 laboratory.o
+ .text.do_pad_test
+                0x0000000000000000        0x0 laboratory.o
+ .text.do_dump_modules_info_test
+                0x0000000000000000        0x0 laboratory.o
+ .text.do_ps2net_copy_test
+                0x0000000000000000        0x0 laboratory.o
+ .text.do_dump_processes_test
+                0x0000000000000000        0x0 laboratory.o
+ .text.do_dump_threads_info_test
+                0x0000000000000000        0x0 laboratory.o
+ .text.pad_test
+                0x0000000000000000        0x0 laboratory.o
+ .text.do_hook_all_syscalls
+                0x0000000000000000        0x0 laboratory.o
+ .text.do_hook_mutex_create
+                0x0000000000000000        0x0 laboratory.o
+ .text._load_module_hook
+                0x0000000000000000        0x0 laboratory.o
+ .text._mutex_create_hooked
+                0x0000000000000000        0x0 laboratory.o
+ .text._syscall_handler
+                0x0000000000000000        0x0 laboratory.o
+ .text.dump_threads_info_test
+                0x0000000000000000        0x0 laboratory.o
+ .text.dump_processes_test
+                0x0000000000000000        0x0 laboratory.o
+ .text.ps2net_copy_test
+                0x0000000000000000        0x0 laboratory.o
+ .text.dump_modules_info_test
+                0x0000000000000000        0x0 laboratory.o
+ .text.do_hook_load_module
+                0x0000000000000000        0x0 laboratory.o
+ .bss.name.4659
+                0x0000000000000000        0x0 laboratory.o
+ .rodata.str1.8
+                0x0000000000000000        0x0 laboratory.o
+ .data          0x0000000000000000        0x0 ../debug/src/debug.o
+ .bss           0x0000000000000000        0x0 ../debug/src/debug.o
+ .text.debug_print_hex_c
+                0x0000000000000000        0x0 ../debug/src/debug.o
+ .text.debug_print_hex
+                0x0000000000000000        0x0 ../debug/src/debug.o
+ .text.abort    0x0000000000000000        0x0 ../debug/src/debug.o
+ .text.debug_end
+                0x0000000000000000        0x0 ../debug/src/debug.o
+ .text.debug_uninstall
+                0x0000000000000000        0x0 ../debug/src/debug.o
+ .text          0x0000000000000000        0x0 ../debug/src/printf.o
+ .data          0x0000000000000000        0x0 ../debug/src/printf.o
+ .bss           0x0000000000000000        0x0 ../debug/src/printf.o
+ .text._vsprintf
+                0x0000000000000000        0x0 ../debug/src/printf.o
+ .text._sprintf
+                0x0000000000000000        0x0 ../debug/src/printf.o
+ .text          0x0000000000000000        0x0 ../debug/src/debug_util.o
+ .data          0x0000000000000000        0x0 ../debug/src/debug_util.o
+ .bss           0x0000000000000000        0x0 ../debug/src/debug_util.o
+ .toc           0x0000000000000000        0x0 ../debug/src/debug_util.o
+ .text.debug_print_modules
+                0x0000000000000000        0x0 ../debug/src/debug_util.o
+ .opd           0x0000000000000000        0x0 ../debug/src/debug_util.o
+ .rodata.str1.8
+                0x0000000000000000        0x0 ../debug/src/debug_util.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD start.o
+LOAD ps3mapi_core.o
+LOAD main.o
+LOAD crypto.o
+LOAD modulespatch.o
+LOAD config.o
+LOAD drm.o
+LOAD psp_s.o
+LOAD mappath.o
+LOAD storage_ext.o
+LOAD region.o
+LOAD psp.o
+LOAD cobra.o
+LOAD permissions.o
+LOAD sm_ext.o
+LOAD ../lv2/src/usb.o
+LOAD ../lv2/src/patch.o
+LOAD ../lv2/src/interrupt.o
+LOAD ../lv2/src/interrupt_c.o
+LOAD ../lv2/src/io.o
+LOAD ../lv2/src/libc.o
+LOAD ../lv2/src/libc_c.o
+LOAD ../lv2/src/memory.o
+LOAD ../lv2/src/memory_c.o
+LOAD ../lv2/src/thread.o
+LOAD ../lv2/src/thread_c.o
+LOAD ../lv2/src/process.o
+LOAD ../lv2/src/synchronization.o
+LOAD ../lv2/src/modules.o
+LOAD ../lv2/src/modules_c.o
+LOAD ../lv2/src/storage.o
+LOAD ../lv2/src/object.o
+LOAD ../lv2/src/security.o
+LOAD ../lv2/src/time.o
+LOAD ../lv2/src/hid.o
+LOAD ../lv2/src/pad.o
+LOAD ../lv2/src/syscall.o
+LOAD ../lv1/src/hvcall.o
+LOAD ../lv1/src/stor.o
+LOAD ../lv1/src/device.o
+LOAD laboratory.o
+LOAD ../debug/src/debug.o
+LOAD ../debug/src/printf.o
+LOAD ../debug/src/debug_util.o
+                0xbaadcafe00000000                __base = 0xbaadcafe00000000
+                0xbaadcafe00000000                . = __base
+                0xbaadcafe00000000                __self_start = .
+
+.start          0xbaadcafe00000000       0xa8
+ *(.start)
+ .start         0xbaadcafe00000000       0xa8 start.o
+                0xbaadcafe00000000                _start
+                0xbaadcafe000000c0                . = ALIGN (0x20)
+
+.text           0xbaadcafe000000c0    0x13ac4
+ *(.text)
+ .text          0xbaadcafe000000c0      0x350 main.o
+ .text          0xbaadcafe00000410      0x378 modulespatch.o
+ .text          0xbaadcafe00000788      0x268 psp_s.o
+                0xbaadcafe00000788                psp_func1
+ .text          0xbaadcafe000009f0       0xc8 mappath.o
+ .text          0xbaadcafe00000ab8      0x700 storage_ext.o
+ .text          0xbaadcafe000011b8       0x68 region.o
+ .text          0xbaadcafe00001220       0x50 permissions.o
+ .text          0xbaadcafe00001270       0x80 sm_ext.o
+ .text          0xbaadcafe000012f0       0x30 ../lv2/src/interrupt.o
+                0xbaadcafe000012f0                suspend_intr
+                0xbaadcafe00001304                resume_intr
+ .text          0xbaadcafe00001320       0x18 ../lv2/src/thread.o
+                0xbaadcafe00001320                get_current_thread
+                0xbaadcafe00001330                get_current_thread_name
+ .text          0xbaadcafe00001338       0x38 ../lv2/src/process.o
+                0xbaadcafe00001338                get_current_process
+ .text          0xbaadcafe00001370       0xf0 ../debug/src/debug.o
+ *(.text.*)
+ .text.ps3mapi_internal_get_process_by_pid
+                0xbaadcafe00001460       0x60 ps3mapi_core.o
+ .text.ps3mapi_check_syscall
+                0xbaadcafe000014c0       0x58 ps3mapi_core.o
+ .text.ps3mapi_disable_syscall
+                0xbaadcafe00001518       0x3c ps3mapi_core.o
+ .text.ps3mapi_set_idps
+                0xbaadcafe00001554       0x34 ps3mapi_core.o
+ .text.ps3mapi_set_psid
+                0xbaadcafe00001588       0x24 ps3mapi_core.o
+ .text.ps3mapi_get_psid
+                0xbaadcafe000015ac       0x78 ps3mapi_core.o
+ .text.ps3mapi_unload_process_modules
+                0xbaadcafe00001624       0xa0 ps3mapi_core.o
+ .text.ps3mapi_get_fw_type
+                0xbaadcafe000016c4       0xb0 ps3mapi_core.o
+ .text.ps3mapi_get_all_processes_pid
+                0xbaadcafe00001774      0x168 ps3mapi_core.o
+ .text.ps3mapi_get_process_name_by_pid
+                0xbaadcafe000018dc      0x128 ps3mapi_core.o
+ .text.ps3mapi_get_process_by_pid
+                0xbaadcafe00001a04       0xac ps3mapi_core.o
+ .text.ps3mapi_get_current_process_critical
+                0xbaadcafe00001ab0       0x90 ps3mapi_core.o
+ .text.ps3mapi_get_current_process
+                0xbaadcafe00001b40       0x84 ps3mapi_core.o
+ .text.ps3mapi_set_process_mem
+                0xbaadcafe00001bc4       0x94 ps3mapi_core.o
+ .text.ps3mapi_get_process_mem
+                0xbaadcafe00001c58      0x158 ps3mapi_core.o
+ .text.ps3mapi_get_all_process_modules_prx_id
+                0xbaadcafe00001db0      0x1ec ps3mapi_core.o
+ .text.ps3mapi_get_process_module_name_by_prx_id
+                0xbaadcafe00001f9c      0x248 ps3mapi_core.o
+ .text.ps3mapi_get_process_module_filename_by_prx_id
+                0xbaadcafe000021e4      0x248 ps3mapi_core.o
+ .text.ps3mapi_load_process_modules
+                0xbaadcafe0000242c      0x238 ps3mapi_core.o
+ .text.ps3mapi_get_idps
+                0xbaadcafe00002664       0x78 ps3mapi_core.o
+ .text._sys_cfw_lv1_call
+                0xbaadcafe000026dc       0x2c main.o
+ .text._sys_cfw_lv2_func
+                0xbaadcafe00002708       0x30 main.o
+ .text._sys_cfw_peek
+                0xbaadcafe00002738       0x68 main.o
+ .text.main     0xbaadcafe000027a0      0x1f8 main.o
+ .text._sys_cfw_poke
+                0xbaadcafe00002998      0x3ac main.o
+ .text._sys_cfw_new_poke
+                0xbaadcafe00002d44       0x40 main.o
+ .text.lv1_cfw_poke
+                0xbaadcafe00002d84       0x34 main.o
+ .text.lv1_cfw_peek
+                0xbaadcafe00002db8       0x34 main.o
+ .text._sys_cfw_memcpy
+                0xbaadcafe00002dec       0xb0 main.o
+ .text._sys_cfw_lv1_poke
+                0xbaadcafe00002e9c       0x5c main.o
+ .text._sys_cfw_lv1_peek
+                0xbaadcafe00002ef8       0x54 main.o
+ .text._syscall8
+                0xbaadcafe00002f4c      0xcec main.o
+ .text.xtea_encrypt_block
+                0xbaadcafe00003c38       0x90 crypto.o
+ .text.xtea_ctr
+                0xbaadcafe00003cc8       0xc8 crypto.o
+ .text._pre_modules_verification
+                0xbaadcafe00003d90       0x1c modulespatch.o
+ .text._create_process_common_hooked_pre
+                0xbaadcafe00003dac       0x34 modulespatch.o
+ .text._load_process_hooked
+                0xbaadcafe00003de0       0xf8 modulespatch.o
+ .text.read_text_line
+                0xbaadcafe00003ed8      0x1b0 modulespatch.o
+ .text.prx_unload_vsh_plugin
+                0xbaadcafe00004088       0xd4 modulespatch.o
+ .text.sys_prx_unload_vsh_plugin
+                0xbaadcafe0000415c       0x10 modulespatch.o
+ .text.prx_load_vsh_plugin
+                0xbaadcafe0000416c      0x2d8 modulespatch.o
+ .text.load_boot_plugins
+                0xbaadcafe00004444      0x20c modulespatch.o
+ .text.bc_to_net
+                0xbaadcafe00004650      0x188 modulespatch.o
+ .text._post_lv1_call_99_wrapper
+                0xbaadcafe000047d8       0x6c modulespatch.o
+ .text._create_process_common_hooked
+                0xbaadcafe00004844      0x124 modulespatch.o
+ .text.sys_prx_load_vsh_plugin
+                0xbaadcafe00004968       0x20 modulespatch.o
+ .text.ps3mapi_unload_vsh_plugin
+                0xbaadcafe00004988      0x29c modulespatch.o
+ .text.ps3mapi_get_vsh_plugin_info
+                0xbaadcafe00004c24      0x2e8 modulespatch.o
+ .text.unhook_all_modules
+                0xbaadcafe00004f0c       0xec modulespatch.o
+ .text.modules_patch_init
+                0xbaadcafe00004ff8      0x290 modulespatch.o
+ .text._pre_map_process_memory
+                0xbaadcafe00005288      0x12c modulespatch.o
+ .text._modules_patching
+                0xbaadcafe000053b4      0x774 modulespatch.o
+ .text.check_and_correct
+                0xbaadcafe00005b28       0xcc config.o
+ .text.checksum
+                0xbaadcafe00005bf4       0x4c config.o
+ .text.write_cobra_config
+                0xbaadcafe00005c40       0xe8 config.o
+ .text.sys_write_cobra_config
+                0xbaadcafe00005d28       0xe4 config.o
+ .text.read_cobra_config
+                0xbaadcafe00005e0c      0x15c config.o
+ .text.sys_read_cobra_config
+                0xbaadcafe00005f68       0xf4 config.o
+ .text.sys_drm_get_data
+                0xbaadcafe0000605c       0x60 drm.o
+ .text.drm_init
+                0xbaadcafe000060bc      0x128 drm.o
+ .text.map_path_patches
+                0xbaadcafe000061e4       0xd8 mappath.o
+ .text.unhook_all_map_path
+                0xbaadcafe000062bc       0x5c mappath.o
+ .text.init_list
+                0xbaadcafe00006318      0x170 mappath.o
+ .text.listed   0xbaadcafe00006488      0x120 mappath.o
+ .text.map_path
+                0xbaadcafe000065a8      0x488 mappath.o
+ .text.map_path_user
+                0xbaadcafe00006a30      0x1f0 mappath.o
+ .text._sys_map_path
+                0xbaadcafe00006c20       0x70 mappath.o
+ .text.sys_map_paths
+                0xbaadcafe00006c90      0x154 mappath.o
+ .text.sys_aio_copy_root
+                0xbaadcafe00006de4      0x260 mappath.o
+ .text._open_path_hook
+                0xbaadcafe00007044      0x524 mappath.o
+ .text.lv1_cfw_peek
+                0xbaadcafe00007568       0x34 storage_ext.o
+ .text.lv1_cfw_poke
+                0xbaadcafe0000759c       0x34 storage_ext.o
+ .text.storage_ext_init
+                0xbaadcafe000075d0      0x1f8 storage_ext.o
+ .text._post_storage_get_device_info
+                0xbaadcafe000077c8      0x22c storage_ext.o
+ .text.copy_user_pointer_array
+                0xbaadcafe000079f4       0xa8 storage_ext.o
+ .text.sys_storage_ext_fake_storage_event
+                0xbaadcafe00007a9c      0x12c storage_ext.o
+ .text.do_read_iso
+                0xbaadcafe00007bc8       0xe4 storage_ext.o
+ .text._emu_read_bdvd2
+                0xbaadcafe00007cac       0xe4 storage_ext.o
+ .text._emu_read_bdvd1
+                0xbaadcafe00007d90       0xd8 storage_ext.o
+ .text._fsloop_read
+                0xbaadcafe00007e68      0x120 storage_ext.o
+ .text._fsloop_close
+                0xbaadcafe00007f88       0xbc storage_ext.o
+ .text._fsloop_open
+                0xbaadcafe00008044       0xc8 storage_ext.o
+ .text.umount_discfile
+                0xbaadcafe0000810c      0x2f0 storage_ext.o
+ .text.sys_storage_ext_umount_discfile
+                0xbaadcafe000083fc       0x10 storage_ext.o
+ .text.mount_common
+                0xbaadcafe0000840c      0x2f8 storage_ext.o
+ .text.mount_bd_discfile
+                0xbaadcafe00008704       0xec storage_ext.o
+ .text.sys_storage_ext_mount_bd_discfile
+                0xbaadcafe000087f0       0xa0 storage_ext.o
+ .text.mount_dvd_discfile
+                0xbaadcafe00008890       0xec storage_ext.o
+ .text.sys_storage_ext_mount_dvd_discfile
+                0xbaadcafe0000897c       0xa0 storage_ext.o
+ .text.mount_ps3_discfile
+                0xbaadcafe00008a1c       0xec storage_ext.o
+ .text.sys_storage_ext_mount_ps3_discfile
+                0xbaadcafe00008b08       0xa0 storage_ext.o
+ .text.mount_ps_cd
+                0xbaadcafe00008ba8      0x5e0 storage_ext.o
+ .text.mount_ps2_discfile
+                0xbaadcafe00009188      0x278 storage_ext.o
+ .text.mount_psx_discfile
+                0xbaadcafe00009400      0x104 storage_ext.o
+ .text.process_generic_iso_scsi_cmd
+                0xbaadcafe00009504      0x218 storage_ext.o
+ .text.process_cd_iso_scsi_cmd
+                0xbaadcafe0000971c      0xda8 storage_ext.o
+ .text.process_cmd
+                0xbaadcafe0000a4c4      0x4a0 storage_ext.o
+ .text.copy_emus
+                0xbaadcafe0000a964      0x200 storage_ext.o
+ .text.get_handle_device
+                0xbaadcafe0000ab64       0x90 storage_ext.o
+ .text._emu_storage_send_device_command
+                0xbaadcafe0000abf4      0x128 storage_ext.o
+ .text._emu_storage_read
+                0xbaadcafe0000ad1c      0x130 storage_ext.o
+ .text._emu_read_bdvd0
+                0xbaadcafe0000ae4c      0x1d8 storage_ext.o
+ .text.find_file_sector
+                0xbaadcafe0000b024       0xe8 storage_ext.o
+ .text.process_proxy_cmd
+                0xbaadcafe0000b10c      0x5f8 storage_ext.o
+ .text.read_psx_sector
+                0xbaadcafe0000b704      0x284 storage_ext.o
+ .text.process_get_psx_video_mode
+                0xbaadcafe0000b988      0x5ec storage_ext.o
+ .text.process_read_disc_cmd
+                0xbaadcafe0000bf74      0x190 storage_ext.o
+ .text.read_real_disc_sector
+                0xbaadcafe0000c104       0xb8 storage_ext.o
+ .text.is_psx   0xbaadcafe0000c1bc      0x300 storage_ext.o
+ .text.process_disc_insert
+                0xbaadcafe0000c4bc      0x24c storage_ext.o
+ .text._device_event
+                0xbaadcafe0000c708      0x1f4 storage_ext.o
+ .text.process_fake_storage_event_cmd
+                0xbaadcafe0000c8fc       0x6c storage_ext.o
+ .text.fake_reinsert
+                0xbaadcafe0000c968       0x84 storage_ext.o
+ .text._post_cellFsUtilMount
+                0xbaadcafe0000c9ec      0x220 storage_ext.o
+ .text.dispatch_thread_entry
+                0xbaadcafe0000cc0c      0xef0 storage_ext.o
+ .text.sys_storage_ext_get_disc_type
+                0xbaadcafe0000dafc      0x130 storage_ext.o
+ .text.sys_storage_ext_read_ps3_disc
+                0xbaadcafe0000dc2c      0x12c storage_ext.o
+ .text.sys_storage_ext_get_emu_state
+                0xbaadcafe0000dd58      0x1ec storage_ext.o
+ .text.sys_storage_ext_mount_psx_discfile
+                0xbaadcafe0000df44       0x88 storage_ext.o
+ .text.sys_storage_ext_mount_ps2_discfile
+                0xbaadcafe0000dfcc       0xec storage_ext.o
+ .text.sys_storage_ext_mount_discfile_proxy
+                0xbaadcafe0000e0b8      0x550 storage_ext.o
+ .text.sys_storage_ext_mount_encrypted_image
+                0xbaadcafe0000e608      0x214 storage_ext.o
+ .text.unhook_all_storage_ext
+                0xbaadcafe0000e81c      0x1c8 storage_ext.o
+ .text.storage_ext_patches
+                0xbaadcafe0000e9e4      0x69c storage_ext.o
+ .text._emu_sys_storage_async_read
+                0xbaadcafe0000f080      0x2b8 storage_ext.o
+ .text._emu_sys_storage_async_send_device_command
+                0xbaadcafe0000f338      0x2b0 storage_ext.o
+ .text._shutdown_copy_params_patched
+                0xbaadcafe0000f5e8      0x940 storage_ext.o
+ .text._emu_disc_auth
+                0xbaadcafe0000ff28      0x38c storage_ext.o
+ .text.unhook_all_region
+                0xbaadcafe000102b4       0x6c region.o
+ .text._region_func
+                0xbaadcafe00010320      0x20c region.o
+ .text.region_patches
+                0xbaadcafe0001052c       0xbc region.o
+ .text.sys_psp_set_emu_path
+                0xbaadcafe000105e8       0x24 psp.o
+ .text.sys_psp_sony_bug
+                0xbaadcafe0001060c      0x1ac psp.o
+ .text.sys_psp_post_savedata_shutdownstart
+                0xbaadcafe000107b8       0x74 psp.o
+ .text.sys_psp_post_savedata_initstart
+                0xbaadcafe0001082c       0x64 psp.o
+ .text.sys_psp_read_header
+                0xbaadcafe00010890      0x548 psp.o
+ .text.sys_psp_read_umd
+                0xbaadcafe00010dd8      0x2d0 psp.o
+ .text.sys_psp_set_umdfile
+                0xbaadcafe000110a8      0x3dc psp.o
+ .text.sys_psp_set_decrypt_options
+                0xbaadcafe00011484       0xc8 psp.o
+ .text.sys_psp_prx_patch
+                0xbaadcafe0001154c       0xec psp.o
+ .text._get_pid_patched
+                0xbaadcafe00011638       0x58 permissions.o
+ .text.permissions_patches
+                0xbaadcafe00011690       0x5c permissions.o
+ .text.sys_permissions_remove_access
+                0xbaadcafe000116ec       0x84 permissions.o
+ .text.sys_permissions_get_access
+                0xbaadcafe00011770       0x64 permissions.o
+ .text.sys_sm_ext_send_poweroff_event
+                0xbaadcafe000117d4       0xec sm_ext.o
+ .text._send_poweroff_event
+                0xbaadcafe000118c0      0x178 sm_ext.o
+ .text.spin_unlock_irqrestore
+                0xbaadcafe00011a38       0x68 ../lv2/src/interrupt_c.o
+ .text.spin_lock_irqsave
+                0xbaadcafe00011aa0       0x58 ../lv2/src/interrupt_c.o
+ .text.strncasecmp
+                0xbaadcafe00011af8       0x70 ../lv2/src/libc_c.o
+ .text.strstr   0xbaadcafe00011b68      0x104 ../lv2/src/libc_c.o
+ .text.ppu_user_thread_create
+                0xbaadcafe00011c6c      0x1c0 ../lv2/src/thread_c.o
+ .text.prx_stop_module_with_thread
+                0xbaadcafe00011e2c      0x120 ../lv2/src/modules_c.o
+ .text.prx_start_module_with_thread
+                0xbaadcafe00011f4c      0x188 ../lv2/src/modules_c.o
+ .text.pad_get_data
+                0xbaadcafe000120d4       0xf4 ../lv2/src/pad.o
+ .text.lv1_stor_wrapper_read
+                0xbaadcafe000121c8       0xd8 ../lv1/src/stor.o
+ .text.lv1_stor_wrapper_close
+                0xbaadcafe000122a0       0x4c ../lv1/src/stor.o
+ .text.lv1_stor_wrapper_open
+                0xbaadcafe000122ec      0x108 ../lv1/src/stor.o
+ .text.lv1_get_repository_node_value
+                0xbaadcafe000123f4       0x34 ../lv1/src/device.o
+ .text.find_device_by_type
+                0xbaadcafe00012428      0x2b4 ../lv1/src/device.o
+ .text.lv1_free_device_dma_region
+                0xbaadcafe000126dc       0x34 ../lv1/src/device.o
+ .text.unmap_dma_mem
+                0xbaadcafe00012710       0x98 ../lv1/src/device.o
+ .text.map_dma_mem
+                0xbaadcafe000127a8       0xf8 ../lv1/src/device.o
+ .text.lv1_panic
+                0xbaadcafe000128a0       0x34 ../debug/src/debug.o
+ .text.debug_print
+                0xbaadcafe000128d4      0x14c ../debug/src/debug.o
+ .text._debug_printf
+                0xbaadcafe00012a20       0x8c ../debug/src/debug.o
+ .text.fatal    0xbaadcafe00012aac       0x38 ../debug/src/debug.o
+ .text._consoleWrite
+                0xbaadcafe00012ae4       0x30 ../debug/src/debug.o
+ .text._ttyWrite
+                0xbaadcafe00012b14       0x5c ../debug/src/debug.o
+ .text.lv1_net_control
+                0xbaadcafe00012b70       0x34 ../debug/src/debug.o
+ .text.debug_init
+                0xbaadcafe00012ba4      0x2a8 ../debug/src/debug.o
+ .text.debug_install
+                0xbaadcafe00012e4c       0xc4 ../debug/src/debug.o
+ .text.fmtstr   0xbaadcafe00012f10      0x158 ../debug/src/printf.o
+ .text.fmtint   0xbaadcafe00013068      0x3c4 ../debug/src/printf.o
+ .text._vsnprintf
+                0xbaadcafe0001342c      0x758 ../debug/src/printf.o
+
+.sfpr           0xbaadcafe00013b84        0x0
+ .sfpr          0x0000000000000000        0x0 linker stubs
+
+.glink          0xbaadcafe00013b84        0x0
+ .glink         0x0000000000000000        0x0 linker stubs
+
+.clear_icache.text
+                0xbaadcafe00013b84       0x2c
+ .clear_icache.text
+                0xbaadcafe00013b84       0x2c ../lv2/src/patch.o
+                0xbaadcafe00013b84                clear_icache
+
+.get_call_address.text
+                0xbaadcafe00013bb0       0x3c
+ .get_call_address.text
+                0xbaadcafe00013bb0       0x3c ../lv2/src/patch.o
+                0xbaadcafe00013bb0                get_call_address
+
+.get_patched_func_call_address.text
+                0xbaadcafe00013bec       0x20
+ .get_patched_func_call_address.text
+                0xbaadcafe00013bec       0x20 ../lv2/src/patch.o
+                0xbaadcafe00013bec                get_patched_func_call_address
+
+.write_patched_func_saved_register.text
+                0xbaadcafe00013c0c       0x18
+ .write_patched_func_saved_register.text
+                0xbaadcafe00013c0c       0x18 ../lv2/src/patch.o
+                0xbaadcafe00013c0c                write_patched_func_saved_register
+
+.call_hooked_function.text
+                0xbaadcafe00013c24       0x5c
+ .call_hooked_function.text
+                0xbaadcafe00013c24       0x5c ../lv2/src/patch.o
+                0xbaadcafe00013c24                call_hooked_function
+
+.spin_lock_irqsave_ex.text
+                0xbaadcafe00013c80       0x10
+ .spin_lock_irqsave_ex.text
+                0xbaadcafe00013c80       0x10 ../lv2/src/interrupt.o
+                0xbaadcafe00013c80                spin_lock_irqsave_ex
+
+.spin_unlock_irqrestore_ex.text
+                0xbaadcafe00013c90       0x10
+ .spin_unlock_irqrestore_ex.text
+                0xbaadcafe00013c90       0x10 ../lv2/src/interrupt.o
+                0xbaadcafe00013c90                spin_unlock_irqrestore_ex
+
+.cellFsOpen.text
+                0xbaadcafe00013ca0       0x10
+ .cellFsOpen.text
+                0xbaadcafe00013ca0       0x10 ../lv2/src/io.o
+                0xbaadcafe00013ca0                cellFsOpen
+
+.cellFsClose.text
+                0xbaadcafe00013cb0       0x10
+ .cellFsClose.text
+                0xbaadcafe00013cb0       0x10 ../lv2/src/io.o
+                0xbaadcafe00013cb0                cellFsClose
+
+.cellFsRead.text
+                0xbaadcafe00013cc0       0x10
+ .cellFsRead.text
+                0xbaadcafe00013cc0       0x10 ../lv2/src/io.o
+                0xbaadcafe00013cc0                cellFsRead
+
+.cellFsWrite.text
+                0xbaadcafe00013cd0       0x10
+ .cellFsWrite.text
+                0xbaadcafe00013cd0       0x10 ../lv2/src/io.o
+                0xbaadcafe00013cd0                cellFsWrite
+
+.cellFsLseek.text
+                0xbaadcafe00013ce0       0x10
+ .cellFsLseek.text
+                0xbaadcafe00013ce0       0x10 ../lv2/src/io.o
+                0xbaadcafe00013ce0                cellFsLseek
+
+.cellFsStat.text
+                0xbaadcafe00013cf0       0x10
+ .cellFsStat.text
+                0xbaadcafe00013cf0       0x10 ../lv2/src/io.o
+                0xbaadcafe00013cf0                cellFsStat
+
+.cellFsUnlink_internal.text
+                0xbaadcafe00013d00       0x10
+ .cellFsUnlink_internal.text
+                0xbaadcafe00013d00       0x10 ../lv2/src/io.o
+                0xbaadcafe00013d00                cellFsUnlink_internal
+
+.cellFsUtilMount_h.text
+                0xbaadcafe00013d10       0x44
+ .cellFsUtilMount_h.text
+                0xbaadcafe00013d10       0x44 ../lv2/src/io.o
+                0xbaadcafe00013d10                cellFsUtilMount_h
+
+.cellFsUtilUmount.text
+                0xbaadcafe00013d58       0x10
+ .cellFsUtilUmount.text
+                0xbaadcafe00013d58       0x10 ../lv2/src/io.o
+                0xbaadcafe00013d58                cellFsUtilUmount
+
+.pathdup_from_user.text
+                0xbaadcafe00013d68       0x10
+ .pathdup_from_user.text
+                0xbaadcafe00013d68       0x10 ../lv2/src/io.o
+                0xbaadcafe00013d68                pathdup_from_user
+
+.open_fs_object.text
+                0xbaadcafe00013d78       0x10
+ .open_fs_object.text
+                0xbaadcafe00013d78       0x10 ../lv2/src/io.o
+                0xbaadcafe00013d78                open_fs_object
+
+.close_fs_object.text
+                0xbaadcafe00013d88       0x10
+ .close_fs_object.text
+                0xbaadcafe00013d88       0x10 ../lv2/src/io.o
+                0xbaadcafe00013d88                close_fs_object
+
+.lv2_sprintf.text
+                0xbaadcafe00013d98       0x10
+ .lv2_sprintf.text
+                0xbaadcafe00013d98       0x10 ../lv2/src/libc.o
+                0xbaadcafe00013d98                lv2_sprintf
+
+.lv2_snprintf.text
+                0xbaadcafe00013da8       0x10
+ .lv2_snprintf.text
+                0xbaadcafe00013da8       0x10 ../lv2/src/libc.o
+                0xbaadcafe00013da8                lv2_snprintf
+
+.lv2_strcpy.text
+                0xbaadcafe00013db8       0x10
+ .lv2_strcpy.text
+                0xbaadcafe00013db8       0x10 ../lv2/src/libc.o
+                0xbaadcafe00013db8                lv2_strcpy
+
+.lv2_strncpy.text
+                0xbaadcafe00013dc8       0x10
+ .lv2_strncpy.text
+                0xbaadcafe00013dc8       0x10 ../lv2/src/libc.o
+                0xbaadcafe00013dc8                lv2_strncpy
+
+.lv2_strlen.text
+                0xbaadcafe00013dd8       0x10
+ .lv2_strlen.text
+                0xbaadcafe00013dd8       0x10 ../lv2/src/libc.o
+                0xbaadcafe00013dd8                lv2_strlen
+
+.lv2_strcat.text
+                0xbaadcafe00013de8       0x10
+ .lv2_strcat.text
+                0xbaadcafe00013de8       0x10 ../lv2/src/libc.o
+                0xbaadcafe00013de8                lv2_strcat
+
+.lv2_strcmp.text
+                0xbaadcafe00013df8       0x10
+ .lv2_strcmp.text
+                0xbaadcafe00013df8       0x10 ../lv2/src/libc.o
+                0xbaadcafe00013df8                lv2_strcmp
+
+.lv2_strncmp.text
+                0xbaadcafe00013e08       0x10
+ .lv2_strncmp.text
+                0xbaadcafe00013e08       0x10 ../lv2/src/libc.o
+                0xbaadcafe00013e08                lv2_strncmp
+
+.lv2_strchr.text
+                0xbaadcafe00013e18       0x10
+ .lv2_strchr.text
+                0xbaadcafe00013e18       0x10 ../lv2/src/libc.o
+                0xbaadcafe00013e18                lv2_strchr
+
+.lv2_memcpy.text
+                0xbaadcafe00013e28       0x10
+ .lv2_memcpy.text
+                0xbaadcafe00013e28       0x10 ../lv2/src/libc.o
+                0xbaadcafe00013e28                lv2_memcpy
+
+.lv2_memset.text
+                0xbaadcafe00013e38       0x10
+ .lv2_memset.text
+                0xbaadcafe00013e38       0x10 ../lv2/src/libc.o
+                0xbaadcafe00013e38                lv2_memset
+
+.lv2_memcmp.text
+                0xbaadcafe00013e48       0x10
+ .lv2_memcmp.text
+                0xbaadcafe00013e48       0x10 ../lv2/src/libc.o
+                0xbaadcafe00013e48                lv2_memcmp
+
+.alloc.text     0xbaadcafe00013e58       0x10
+ .alloc.text    0xbaadcafe00013e58       0x10 ../lv2/src/memory.o
+                0xbaadcafe00013e58                alloc
+
+.dealloc.text   0xbaadcafe00013e68       0x10
+ .dealloc.text  0xbaadcafe00013e68       0x10 ../lv2/src/memory.o
+                0xbaadcafe00013e68                dealloc
+
+.copy_to_user.text
+                0xbaadcafe00013e78       0x10
+ .copy_to_user.text
+                0xbaadcafe00013e78       0x10 ../lv2/src/memory.o
+                0xbaadcafe00013e78                copy_to_user
+
+.copy_from_user.text
+                0xbaadcafe00013e88       0x10
+ .copy_from_user.text
+                0xbaadcafe00013e88       0x10 ../lv2/src/memory.o
+                0xbaadcafe00013e88                copy_from_user
+
+.copy_to_process.text
+                0xbaadcafe00013e98       0x10
+ .copy_to_process.text
+                0xbaadcafe00013e98       0x10 ../lv2/src/memory.o
+                0xbaadcafe00013e98                copy_to_process
+
+.copy_from_process.text
+                0xbaadcafe00013ea8       0x10
+ .copy_from_process.text
+                0xbaadcafe00013ea8       0x10 ../lv2/src/memory.o
+                0xbaadcafe00013ea8                copy_from_process
+
+.page_allocate.text
+                0xbaadcafe00013eb8       0x10
+ .page_allocate.text
+                0xbaadcafe00013eb8       0x10 ../lv2/src/memory.o
+                0xbaadcafe00013eb8                page_allocate
+
+.page_free.text
+                0xbaadcafe00013ec8       0x10
+ .page_free.text
+                0xbaadcafe00013ec8       0x10 ../lv2/src/memory.o
+                0xbaadcafe00013ec8                page_free
+
+.page_export_to_proc.text
+                0xbaadcafe00013ed8       0x10
+ .page_export_to_proc.text
+                0xbaadcafe00013ed8       0x10 ../lv2/src/memory.o
+                0xbaadcafe00013ed8                page_export_to_proc
+
+.page_unexport_from_proc.text
+                0xbaadcafe00013ee8       0x10
+ .page_unexport_from_proc.text
+                0xbaadcafe00013ee8       0x10 ../lv2/src/memory.o
+                0xbaadcafe00013ee8                page_unexport_from_proc
+
+.kernel_ea_to_lpar_addr.text
+                0xbaadcafe00013ef8       0x10
+ .kernel_ea_to_lpar_addr.text
+                0xbaadcafe00013ef8       0x10 ../lv2/src/memory.o
+                0xbaadcafe00013ef8                kernel_ea_to_lpar_addr
+
+.ppu_thread_create.text
+                0xbaadcafe00013f08       0x10
+ .ppu_thread_create.text
+                0xbaadcafe00013f08       0x10 ../lv2/src/thread.o
+                0xbaadcafe00013f08                ppu_thread_create
+
+.ppu_thread_exit.text
+                0xbaadcafe00013f18       0x10
+ .ppu_thread_exit.text
+                0xbaadcafe00013f18       0x10 ../lv2/src/thread.o
+                0xbaadcafe00013f18                ppu_thread_exit
+
+.ppu_thread_join.text
+                0xbaadcafe00013f28       0x10
+ .ppu_thread_join.text
+                0xbaadcafe00013f28       0x10 ../lv2/src/thread.o
+                0xbaadcafe00013f28                ppu_thread_join
+
+.create_user_thread2.text
+                0xbaadcafe00013f38       0x10
+ .create_user_thread2.text
+                0xbaadcafe00013f38       0x10 ../lv2/src/thread.o
+                0xbaadcafe00013f38                create_user_thread2
+
+.start_thread.text
+                0xbaadcafe00013f48       0x10
+ .start_thread.text
+                0xbaadcafe00013f48       0x10 ../lv2/src/thread.o
+                0xbaadcafe00013f48                start_thread
+
+.run_thread.text
+                0xbaadcafe00013f58       0x10
+ .run_thread.text
+                0xbaadcafe00013f58       0x10 ../lv2/src/thread.o
+                0xbaadcafe00013f58                run_thread
+
+.register_thread.text
+                0xbaadcafe00013f68       0x10
+ .register_thread.text
+                0xbaadcafe00013f68       0x10 ../lv2/src/thread.o
+                0xbaadcafe00013f68                register_thread
+
+.allocate_user_stack.text
+                0xbaadcafe00013f78       0x10
+ .allocate_user_stack.text
+                0xbaadcafe00013f78       0x10 ../lv2/src/thread.o
+                0xbaadcafe00013f78                allocate_user_stack
+
+.mutex_create.text
+                0xbaadcafe00013f88       0x10
+ .mutex_create.text
+                0xbaadcafe00013f88       0x10 ../lv2/src/synchronization.o
+                0xbaadcafe00013f88                mutex_create
+
+.mutex_destroy.text
+                0xbaadcafe00013f98       0x10
+ .mutex_destroy.text
+                0xbaadcafe00013f98       0x10 ../lv2/src/synchronization.o
+                0xbaadcafe00013f98                mutex_destroy
+
+.mutex_lock.text
+                0xbaadcafe00013fa8       0x10
+ .mutex_lock.text
+                0xbaadcafe00013fa8       0x10 ../lv2/src/synchronization.o
+                0xbaadcafe00013fa8                mutex_lock
+
+.mutex_unlock.text
+                0xbaadcafe00013fb8       0x10
+ .mutex_unlock.text
+                0xbaadcafe00013fb8       0x10 ../lv2/src/synchronization.o
+                0xbaadcafe00013fb8                mutex_unlock
+
+.event_port_create.text
+                0xbaadcafe00013fc8       0x10
+ .event_port_create.text
+                0xbaadcafe00013fc8       0x10 ../lv2/src/synchronization.o
+                0xbaadcafe00013fc8                event_port_create
+
+.event_port_destroy.text
+                0xbaadcafe00013fd8       0x10
+ .event_port_destroy.text
+                0xbaadcafe00013fd8       0x10 ../lv2/src/synchronization.o
+                0xbaadcafe00013fd8                event_port_destroy
+
+.event_port_connect.text
+                0xbaadcafe00013fe8       0x10
+ .event_port_connect.text
+                0xbaadcafe00013fe8       0x10 ../lv2/src/synchronization.o
+                0xbaadcafe00013fe8                event_port_connect
+
+.event_port_disconnect.text
+                0xbaadcafe00013ff8       0x10
+ .event_port_disconnect.text
+                0xbaadcafe00013ff8       0x10 ../lv2/src/synchronization.o
+                0xbaadcafe00013ff8                event_port_disconnect
+
+.event_port_send.text
+                0xbaadcafe00014008       0x10
+ .event_port_send.text
+                0xbaadcafe00014008       0x10 ../lv2/src/synchronization.o
+                0xbaadcafe00014008                event_port_send
+
+.event_queue_create.text
+                0xbaadcafe00014018       0x10
+ .event_queue_create.text
+                0xbaadcafe00014018       0x10 ../lv2/src/synchronization.o
+                0xbaadcafe00014018                event_queue_create
+
+.event_queue_destroy.text
+                0xbaadcafe00014028       0x10
+ .event_queue_destroy.text
+                0xbaadcafe00014028       0x10 ../lv2/src/synchronization.o
+                0xbaadcafe00014028                event_queue_destroy
+
+.event_queue_receive.text
+                0xbaadcafe00014038       0x10
+ .event_queue_receive.text
+                0xbaadcafe00014038       0x10 ../lv2/src/synchronization.o
+                0xbaadcafe00014038                event_queue_receive
+
+.decrypt_func.text
+                0xbaadcafe00014048       0x10
+ .decrypt_func.text
+                0xbaadcafe00014048       0x10 ../lv2/src/modules.o
+                0xbaadcafe00014048                decrypt_func
+
+.prx_load_module.text
+                0xbaadcafe00014058       0x10
+ .prx_load_module.text
+                0xbaadcafe00014058       0x10 ../lv2/src/modules.o
+                0xbaadcafe00014058                prx_load_module
+
+.prx_start_module.text
+                0xbaadcafe00014068       0x10
+ .prx_start_module.text
+                0xbaadcafe00014068       0x10 ../lv2/src/modules.o
+                0xbaadcafe00014068                prx_start_module
+
+.prx_stop_module.text
+                0xbaadcafe00014078       0x10
+ .prx_stop_module.text
+                0xbaadcafe00014078       0x10 ../lv2/src/modules.o
+                0xbaadcafe00014078                prx_stop_module
+
+.prx_unload_module.text
+                0xbaadcafe00014088       0x10
+ .prx_unload_module.text
+                0xbaadcafe00014088       0x10 ../lv2/src/modules.o
+                0xbaadcafe00014088                prx_unload_module
+
+.prx_get_module_info.text
+                0xbaadcafe00014098       0x10
+ .prx_get_module_info.text
+                0xbaadcafe00014098       0x10 ../lv2/src/modules.o
+                0xbaadcafe00014098                prx_get_module_info
+
+.prx_get_module_id_by_address.text
+                0xbaadcafe000140a8       0x10
+ .prx_get_module_id_by_address.text
+                0xbaadcafe000140a8       0x10 ../lv2/src/modules.o
+                0xbaadcafe000140a8                prx_get_module_id_by_address
+
+.prx_get_module_list.text
+                0xbaadcafe000140b8       0x10
+ .prx_get_module_list.text
+                0xbaadcafe000140b8       0x10 ../lv2/src/modules.o
+                0xbaadcafe000140b8                prx_get_module_list
+
+.storage_open.text
+                0xbaadcafe000140c8       0x10
+ .storage_open.text
+                0xbaadcafe000140c8       0x10 ../lv2/src/storage.o
+                0xbaadcafe000140c8                storage_open
+
+.storage_close.text
+                0xbaadcafe000140d8       0x10
+ .storage_close.text
+                0xbaadcafe000140d8       0x10 ../lv2/src/storage.o
+                0xbaadcafe000140d8                storage_close
+
+.storage_map_io_memory.text
+                0xbaadcafe000140e8       0x10
+ .storage_map_io_memory.text
+                0xbaadcafe000140e8       0x10 ../lv2/src/storage.o
+                0xbaadcafe000140e8                storage_map_io_memory
+
+.storage_unmap_io_memory.text
+                0xbaadcafe000140f8       0x10
+ .storage_unmap_io_memory.text
+                0xbaadcafe000140f8       0x10 ../lv2/src/storage.o
+                0xbaadcafe000140f8                storage_unmap_io_memory
+
+.storage_internal_get_device_object.text
+                0xbaadcafe00014108       0x10
+ .storage_internal_get_device_object.text
+                0xbaadcafe00014108       0x10 ../lv2/src/storage.o
+                0xbaadcafe00014108                storage_internal_get_device_object
+
+.open_kernel_object.text
+                0xbaadcafe00014118       0x10
+ .open_kernel_object.text
+                0xbaadcafe00014118       0x10 ../lv2/src/object.o
+                0xbaadcafe00014118                open_kernel_object
+
+.open_shared_kernel_object.text
+                0xbaadcafe00014128       0x10
+ .open_shared_kernel_object.text
+                0xbaadcafe00014128       0x10 ../lv2/src/object.o
+                0xbaadcafe00014128                open_shared_kernel_object
+
+.close_kernel_object_handle.text
+                0xbaadcafe00014138       0x10
+ .close_kernel_object_handle.text
+                0xbaadcafe00014138       0x10 ../lv2/src/object.o
+                0xbaadcafe00014138                close_kernel_object_handle
+
+.get_pseudo_random_number.text
+                0xbaadcafe00014148       0x10
+ .get_pseudo_random_number.text
+                0xbaadcafe00014148       0x10 ../lv2/src/security.o
+                0xbaadcafe00014148                get_pseudo_random_number
+
+.ss_get_open_psid.text
+                0xbaadcafe00014158       0x10
+ .ss_get_open_psid.text
+                0xbaadcafe00014158       0x10 ../lv2/src/security.o
+                0xbaadcafe00014158                ss_get_open_psid
+
+.hid_mgr_read_usb.text
+                0xbaadcafe00014168       0x10
+ .hid_mgr_read_usb.text
+                0xbaadcafe00014168       0x10 ../lv2/src/hid.o
+                0xbaadcafe00014168                hid_mgr_read_usb
+
+.hid_mgr_read_bt.text
+                0xbaadcafe00014178       0x10
+ .hid_mgr_read_bt.text
+                0xbaadcafe00014178       0x10 ../lv2/src/hid.o
+                0xbaadcafe00014178                hid_mgr_read_bt
+
+.extend_kstack.text
+                0xbaadcafe00014188       0x10
+ .extend_kstack.text
+                0xbaadcafe00014188       0x10 ../lv2/src/syscall.o
+                0xbaadcafe00014188                extend_kstack
+
+._lv1_get_repository_node_value.text
+                0xbaadcafe00014198       0x3c
+ ._lv1_get_repository_node_value.text
+                0xbaadcafe00014198       0x3c ../lv1/src/hvcall.o
+                0xbaadcafe00014198                _lv1_get_repository_node_value
+
+._lv1_allocate_device_dma_region.text
+                0xbaadcafe000141d4       0x30
+ ._lv1_allocate_device_dma_region.text
+                0xbaadcafe000141d4       0x30 ../lv1/src/hvcall.o
+                0xbaadcafe000141d4                _lv1_allocate_device_dma_region
+
+._lv1_free_device_dma_region.text
+                0xbaadcafe00014204       0x20
+ ._lv1_free_device_dma_region.text
+                0xbaadcafe00014204       0x20 ../lv1/src/hvcall.o
+                0xbaadcafe00014204                _lv1_free_device_dma_region
+
+._lv1_map_device_dma_region.text
+                0xbaadcafe00014224       0x20
+ ._lv1_map_device_dma_region.text
+                0xbaadcafe00014224       0x20 ../lv1/src/hvcall.o
+                0xbaadcafe00014224                _lv1_map_device_dma_region
+
+._lv1_unmap_device_dma_region.text
+                0xbaadcafe00014244       0x20
+ ._lv1_unmap_device_dma_region.text
+                0xbaadcafe00014244       0x20 ../lv1/src/hvcall.o
+                0xbaadcafe00014244                _lv1_unmap_device_dma_region
+
+._lv1_net_start_tx_dma.text
+                0xbaadcafe00014264       0x20
+ ._lv1_net_start_tx_dma.text
+                0xbaadcafe00014264       0x20 ../lv1/src/hvcall.o
+                0xbaadcafe00014264                _lv1_net_start_tx_dma
+
+._lv1_net_control.text
+                0xbaadcafe00014284       0x3c
+ ._lv1_net_control.text
+                0xbaadcafe00014284       0x3c ../lv1/src/hvcall.o
+                0xbaadcafe00014284                _lv1_net_control
+
+._lv1_storage_read.text
+                0xbaadcafe000142c0       0x30
+ ._lv1_storage_read.text
+                0xbaadcafe000142c0       0x30 ../lv1/src/hvcall.o
+                0xbaadcafe000142c0                _lv1_storage_read
+
+._lv1_storage_check_async_status.text
+                0xbaadcafe000142f0       0x30
+ ._lv1_storage_check_async_status.text
+                0xbaadcafe000142f0       0x30 ../lv1/src/hvcall.o
+                0xbaadcafe000142f0                _lv1_storage_check_async_status
+
+._lv1_panic.text
+                0xbaadcafe00014320       0x20
+ ._lv1_panic.text
+                0xbaadcafe00014320       0x20 ../lv1/src/hvcall.o
+                0xbaadcafe00014320                _lv1_panic
+
+._lv1_cfw_peek.text
+                0xbaadcafe00014340       0x30
+ ._lv1_cfw_peek.text
+                0xbaadcafe00014340       0x30 ../lv1/src/hvcall.o
+                0xbaadcafe00014340                _lv1_cfw_peek
+
+._lv1_cfw_poke.text
+                0xbaadcafe00014370       0x20
+ ._lv1_cfw_poke.text
+                0xbaadcafe00014370       0x20 ../lv1/src/hvcall.o
+                0xbaadcafe00014370                _lv1_cfw_poke
+
+.rodata         0xbaadcafe00014390     0x19f8
+ *(.rodata)
+ .rodata        0xbaadcafe00014390       0x10 mappath.o
+ *(.rodata.*)
+ .rodata.brlt   0xbaadcafe000143a0        0x0 linker stubs
+ .rodata.str1.8
+                0xbaadcafe000143a0       0x13 ps3mapi_core.o
+                                         0x18 (size before relaxing)
+ *fill*         0xbaadcafe000143b3        0x1 00
+ .rodata.kernel_patches
+                0xbaadcafe000143b4       0x68 main.o
+ *fill*         0xbaadcafe0001441c        0x4 00
+ .rodata.str1.8
+                0xbaadcafe00014420      0x2dd main.o
+                                        0x2e0 (size before relaxing)
+ *fill*         0xbaadcafe000146fd        0x3 00
+ .rodata.str1.8
+                0xbaadcafe00014700      0x386 modulespatch.o
+                                        0x390 (size before relaxing)
+ *fill*         0xbaadcafe00014a86        0x2 00
+ .rodata.str1.8
+                0xbaadcafe00014a88       0x86 config.o
+                                         0x88 (size before relaxing)
+ *fill*         0xbaadcafe00014b0e        0x2 00
+ .rodata.str1.8
+                0xbaadcafe00014b10      0x19e mappath.o
+                                        0x1a0 (size before relaxing)
+ .rodata.q_crc_lut
+                0xbaadcafe00014cae      0x200 storage_ext.o
+ *fill*         0xbaadcafe00014eae        0x2 00
+ .rodata.str1.8
+                0xbaadcafe00014eb0      0x9cc storage_ext.o
+                                        0xa58 (size before relaxing)
+ *fill*         0xbaadcafe0001587c        0x4 00
+ .rodata.str1.8
+                0xbaadcafe00015880       0x54 region.o
+                                         0x58 (size before relaxing)
+ .rodata.dvd_video_region_map
+                0xbaadcafe000158d4       0x18 region.o
+ .rodata.bd_video_region_map
+                0xbaadcafe000158ec       0x18 region.o
+ *fill*         0xbaadcafe00015904        0x4 00
+ .rodata.str1.8
+                0xbaadcafe00015908      0x3f8 psp.o
+                                        0x418 (size before relaxing)
+ .rodata.str1.8
+                0x0000000000000000      0x3f8 ../lv2/src/modules_c.o
+                                          0x8 (size before relaxing)
+ .rodata.str1.8
+                0xbaadcafe00015d00       0x44 ../debug/src/debug.o
+                                         0x60 (size before relaxing)
+ *fill*         0xbaadcafe00015d44        0x4 00
+ .rodata.str1.8
+                0xbaadcafe00015d48       0x40 ../debug/src/printf.o
+                0xbaadcafe00015d88                __reloc_start = .
+
+.data           0xbaadcafe00015d88      0x974
+ *(.data)
+ *(.data.*)
+ .data.ps3mapi_access_granted
+                0xbaadcafe00015d88        0x1 main.o
+ .data.condition_pemucorelib
+                0xbaadcafe00015d89        0x1 modulespatch.o
+                0xbaadcafe00015d89                condition_pemucorelib
+ *fill*         0xbaadcafe00015d8a        0x6 00
+ .data.rel.libsysutil_savedata_psp_patches
+                0xbaadcafe00015d90       0x60 modulespatch.o
+                0xbaadcafe00015d90                libsysutil_savedata_psp_patches
+ .data.sprx_keys_set1
+                0xbaadcafe00015df0       0x18 modulespatch.o
+                0xbaadcafe00015df0                sprx_keys_set1
+ .data.sprx_keys_set2
+                0xbaadcafe00015e08       0x30 modulespatch.o
+                0xbaadcafe00015e08                sprx_keys_set2
+ .data.rel.game_ext_plugin_patches
+                0xbaadcafe00015e38       0x40 modulespatch.o
+                0xbaadcafe00015e38                game_ext_plugin_patches
+ .data.rel.libfs_external_patches
+                0xbaadcafe00015e78       0xd0 modulespatch.o
+                0xbaadcafe00015e78                libfs_external_patches
+ .data.ps1_netemu_patches
+                0xbaadcafe00015f48       0x20 modulespatch.o
+                0xbaadcafe00015f48                ps1_netemu_patches
+ .data.rel.cex_vsh_patches
+                0xbaadcafe00015f68       0x50 modulespatch.o
+                0xbaadcafe00015f68                cex_vsh_patches
+ .data.rel.patch_table
+                0xbaadcafe00015fb8       0xc0 modulespatch.o
+                0xbaadcafe00015fb8                patch_table
+ .data.rel.explore_plugin_patches
+                0xbaadcafe00016078       0x20 modulespatch.o
+                0xbaadcafe00016078                explore_plugin_patches
+ .data.rel.explore_category_game_patches
+                0xbaadcafe00016098       0x20 modulespatch.o
+                0xbaadcafe00016098                explore_category_game_patches
+ .data.ps1_emu_patches
+                0xbaadcafe000160b8       0x20 modulespatch.o
+                0xbaadcafe000160b8                ps1_emu_patches
+ .data.rel.emulator_api_patches
+                0xbaadcafe000160d8      0x270 modulespatch.o
+                0xbaadcafe000160d8                emulator_api_patches
+ .data.condition_true
+                0xbaadcafe00016348        0x1 modulespatch.o
+ *fill*         0xbaadcafe00016349        0x7 00
+ .data.rel.pemucorelib_patches
+                0xbaadcafe00016350      0x280 modulespatch.o
+                0xbaadcafe00016350                pemucorelib_patches
+ .data.rel.psp_emulator_patches
+                0xbaadcafe000165d0       0x20 modulespatch.o
+                0xbaadcafe000165d0                psp_emulator_patches
+ .data.bdp_disc_check_plugin_patches
+                0xbaadcafe000165f0       0x20 modulespatch.o
+                0xbaadcafe000165f0                bdp_disc_check_plugin_patches
+ .data.discfd   0xbaadcafe00016610        0x4 storage_ext.o
+ *fill*         0xbaadcafe00016614        0x4 00
+ .data.encrypted_image_keys
+                0xbaadcafe00016618       0x10 storage_ext.o
+                0xbaadcafe00016618                encrypted_image_keys
+ .data.cd_sector_size
+                0xbaadcafe00016628        0x4 storage_ext.o
+ *fill*         0xbaadcafe0001662c        0x4 00
+ .data.ps2emu_stage2
+                0xbaadcafe00016630       0x10 storage_ext.o
+                0xbaadcafe00016630                ps2emu_stage2
+ .data.video_mode
+                0xbaadcafe00016640        0x4 storage_ext.o
+ .data.encrypted_image_fd
+                0xbaadcafe00016644        0x4 storage_ext.o
+ .data.psp_drm_patches
+                0xbaadcafe00016648       0xb0 psp.o
+                0xbaadcafe00016648                psp_drm_patches
+ .data.umd_fd   0xbaadcafe000166f8        0x4 psp.o
+ *(.sdata)
+ *(.sdata.*)
+
+.bss            0xbaadcafe00016700      0xc6c
+ *(.sbss)
+ *(.sbss.*)
+ *(COMMON)
+ COMMON         0xbaadcafe00016700       0x10 main.o
+                0xbaadcafe00016700                extended_syscall8
+ COMMON         0xbaadcafe00016710       0x38 modulespatch.o
+                0xbaadcafe00016710                safe_mode
+                0xbaadcafe00016718                vsh_process
+                0xbaadcafe00016720                vsh_plugins
+                0xbaadcafe00016740                vsh_check
+ COMMON         0xbaadcafe00016748        0xf config.o
+                0xbaadcafe00016748                config
+ *fill*         0xbaadcafe00016757        0x1 00
+ COMMON         0xbaadcafe00016758       0x18 drm.o
+                0xbaadcafe00016758                drm_data
+ COMMON         0xbaadcafe00016770      0x180 mappath.o
+                0xbaadcafe00016770                map_table
+ COMMON         0xbaadcafe000168f0       0x10 storage_ext.o
+                0xbaadcafe000168f0                fake_disctype
+                0xbaadcafe000168f4                ps2emu_type
+                0xbaadcafe000168f8                effective_disctype
+                0xbaadcafe000168fc                real_disctype
+ COMMON         0xbaadcafe00016900        0x2 region.o
+                0xbaadcafe00016900                bd_video_region
+                0xbaadcafe00016901                dvd_video_region
+ *fill*         0xbaadcafe00016902        0x6 00
+ COMMON         0xbaadcafe00016908       0x74 psp.o
+                0xbaadcafe00016908                pspemu_path
+                0xbaadcafe00016930                psp_keys
+                0xbaadcafe00016940                patches_backup
+                0xbaadcafe00016948                psp_code
+                0xbaadcafe00016950                psptrans_path
+                0xbaadcafe00016978                psp_tag
+ COMMON         0xbaadcafe0001697c        0x4 permissions.o
+                0xbaadcafe0001697c                access_pid
+ COMMON         0xbaadcafe00016980      0x610 ../debug/src/debug.o
+                0xbaadcafe00016980                dbg_
+ *(.bss)
+ *(.bss.*)
+ .bss.ps3mapi_access_tries
+                0xbaadcafe00016f90        0x1 main.o
+ *fill*         0xbaadcafe00016f91        0x3 00
+ .bss.ps3mapi_partial_disable_syscall8
+                0xbaadcafe00016f94        0x4 main.o
+ .bss.disable_cobra
+                0xbaadcafe00016f98        0x1 main.o
+ *fill*         0xbaadcafe00016f99        0x7 00
+ .bss.current_813
+                0xbaadcafe00016fa0        0x8 main.o
+ .bss.tmp_lv1peek.5377
+                0xbaadcafe00016fa8        0x1 main.o
+ *fill*         0xbaadcafe00016fa9        0x7 00
+ .bss.ps3mapi_key
+                0xbaadcafe00016fb0        0x8 main.o
+ .bss.buf.4308  0xbaadcafe00016fb8        0x8 modulespatch.o
+ .bss.caller_process
+                0xbaadcafe00016fc0        0x4 modulespatch.o
+ .bss.total.4307
+                0xbaadcafe00016fc4        0x4 modulespatch.o
+ .bss.condition_ps2softemu
+                0xbaadcafe00016fc8        0x1 modulespatch.o
+                0xbaadcafe00016fc8                condition_ps2softemu
+ .bss.condition_psp_iso
+                0xbaadcafe00016fc9        0x1 modulespatch.o
+                0xbaadcafe00016fc9                condition_psp_iso
+ *fill*         0xbaadcafe00016fca        0x6 00
+ .bss.nonce.4310
+                0xbaadcafe00016fd0        0x8 modulespatch.o
+ .bss.condition_psp_dec
+                0xbaadcafe00016fd8        0x1 modulespatch.o
+                0xbaadcafe00016fd8                condition_psp_dec
+ *fill*         0xbaadcafe00016fd9        0x7 00
+ .bss.saved_buf
+                0xbaadcafe00016fe0        0x8 modulespatch.o
+ .bss.condition_apphome
+                0xbaadcafe00016fe8        0x1 modulespatch.o
+                0xbaadcafe00016fe8                condition_apphome
+ .bss.condition_psp_prometheus
+                0xbaadcafe00016fe9        0x1 modulespatch.o
+                0xbaadcafe00016fe9                condition_psp_prometheus
+ .bss.condition_psp_change_emu
+                0xbaadcafe00016fea        0x1 modulespatch.o
+                0xbaadcafe00016fea                condition_psp_change_emu
+ *fill*         0xbaadcafe00016feb        0x5 00
+ .bss.saved_sce_hdr
+                0xbaadcafe00016ff0        0x8 modulespatch.o
+ .bss.condition_false
+                0xbaadcafe00016ff8        0x1 modulespatch.o
+ .bss.condition_psp_keys
+                0xbaadcafe00016ff9        0x1 modulespatch.o
+                0xbaadcafe00016ff9                condition_psp_keys
+ .bss.cleared_stage1
+                0xbaadcafe00016ffa        0x1 modulespatch.o
+                0xbaadcafe00016ffa                cleared_stage1
+ *fill*         0xbaadcafe00016ffb        0x1 00
+ .bss.bc_to_net_status
+                0xbaadcafe00016ffc        0x4 modulespatch.o
+                0xbaadcafe00016ffc                bc_to_net_status
+ .bss.keys.4309
+                0xbaadcafe00017000       0x10 modulespatch.o
+ .bss.loading_vsh_plugin
+                0xbaadcafe00017010        0x4 modulespatch.o
+ *fill*         0xbaadcafe00017014        0x4 00
+ .bss.__whitelist
+                0xbaadcafe00017018      0x110 mappath.o
+ .bss.__blacklist
+                0xbaadcafe00017128      0x110 mappath.o
+ .bss.__blacklist_entries
+                0xbaadcafe00017238        0x4 mappath.o
+ .bss.__initialized_lists
+                0xbaadcafe0001723c        0x4 mappath.o
+ .bss.__whitelist_entries
+                0xbaadcafe00017240        0x4 mappath.o
+ *fill*         0xbaadcafe00017244        0x4 00
+ .bss.discfile_proxy
+                0xbaadcafe00017248        0x8 storage_ext.o
+ .bss.skip_emu_check
+                0xbaadcafe00017250        0x4 storage_ext.o
+ *fill*         0xbaadcafe00017254        0x4 00
+ .bss.proxy_result_queue
+                0xbaadcafe00017258        0x8 storage_ext.o
+ .bss.result_queue
+                0xbaadcafe00017260        0x8 storage_ext.o
+ .bss.command_port
+                0xbaadcafe00017268        0x8 storage_ext.o
+ .bss.disc_emulation
+                0xbaadcafe00017270        0x4 storage_ext.o
+ *fill*         0xbaadcafe00017274        0x4 00
+ .bss.encrypted_image_nonce
+                0xbaadcafe00017278        0x8 storage_ext.o
+ .bss.hdd0_mounted
+                0xbaadcafe00017280        0x4 storage_ext.o
+ *fill*         0xbaadcafe00017284        0x4 00
+ .bss.mutex     0xbaadcafe00017288        0x8 storage_ext.o
+ .bss.discfile_cd
+                0xbaadcafe00017290        0x8 storage_ext.o
+ .bss.discfile  0xbaadcafe00017298        0x8 storage_ext.o
+ .bss.could_not_read_disc
+                0xbaadcafe000172a0        0x4 storage_ext.o
+ *fill*         0xbaadcafe000172a4        0x4 00
+ .bss.encrypted_image
+                0xbaadcafe000172a8        0x8 storage_ext.o
+ .bss.total_emulation
+                0xbaadcafe000172b0        0x4 storage_ext.o
+ *fill*         0xbaadcafe000172b4        0x4 00
+ .bss.proxy_command_port
+                0xbaadcafe000172b8        0x8 storage_ext.o
+ .bss.result_port
+                0xbaadcafe000172c0        0x8 storage_ext.o
+ .bss.inloop.6232
+                0xbaadcafe000172c8        0x4 storage_ext.o
+ .bss.disc_being_mounted
+                0xbaadcafe000172cc        0x4 storage_ext.o
+ .bss.emu_ps3_rec
+                0xbaadcafe000172d0        0x4 storage_ext.o
+ .bss.loop      0xbaadcafe000172d4        0x4 storage_ext.o
+ .bss.command_queue
+                0xbaadcafe000172d8        0x8 storage_ext.o
+ .bss.mutex     0xbaadcafe000172e0        0x8 psp.o
+ .bss.pemucorelib_base
+                0xbaadcafe000172e8        0x8 psp.o
+ .bss.savedata_param
+                0xbaadcafe000172f0        0x8 psp.o
+ .bss.emulator_api_base
+                0xbaadcafe000172f8        0x8 psp.o
+ .bss.psp_id    0xbaadcafe00017300       0x10 psp.o
+ .bss.umd_file  0xbaadcafe00017310        0x8 psp.o
+ .bss.user_mutex
+                0xbaadcafe00017318        0x4 psp.o
+ .bss.is_reboot
+                0xbaadcafe0001731c        0x4 sm_ext.o
+ .bss.patch_done
+                0xbaadcafe00017320        0x4 sm_ext.o
+ *fill*         0xbaadcafe00017324        0x4 00
+ .bss.h_vlan    0xbaadcafe00017328        0x8 ../debug/src/debug.o
+ .bss.h_udp     0xbaadcafe00017330        0x8 ../debug/src/debug.o
+ .bss.bus_addr  0xbaadcafe00017338        0x8 ../debug/src/debug.o
+ .bss.h_eth     0xbaadcafe00017340        0x8 ../debug/src/debug.o
+ .bss.bus_id    0xbaadcafe00017348        0x4 ../debug/src/debug.o
+ .bss.debug_initialized
+                0xbaadcafe0001734c        0x4 ../debug/src/debug.o
+ .bss.pmsg      0xbaadcafe00017350        0x8 ../debug/src/debug.o
+ .bss.header_size
+                0xbaadcafe00017358        0x4 ../debug/src/debug.o
+ .bss.dev_id    0xbaadcafe0001735c        0x4 ../debug/src/debug.o
+ .bss.h_ip      0xbaadcafe00017360        0x8 ../debug/src/debug.o
+                0xbaadcafe00017368        0x4 LONG 0x0
+                0xbaadcafe00017380                . = ALIGN (0x20)
+                0xbaadcafe00017380                __toc_start = .
+                0xbaadcafe0001f380                __toc = (. + 0x8000)
+
+.toc            0xbaadcafe00017380     0x15c8
+ *(.toc)
+ .toc           0xbaadcafe00017380       0xe0 ps3mapi_core.o
+ .toc           0xbaadcafe00017460      0x218 main.o
+ .toc           0xbaadcafe00017678      0x3d0 modulespatch.o
+ .toc           0xbaadcafe00017a48       0x60 config.o
+ .toc           0xbaadcafe00017aa8       0x20 drm.o
+ .toc           0xbaadcafe00017ac8      0x1b8 mappath.o
+ .toc           0xbaadcafe00017c80      0x7d8 storage_ext.o
+ .toc           0xbaadcafe00018458       0x50 region.o
+ .toc           0xbaadcafe000184a8      0x278 psp.o
+ .toc           0xbaadcafe00018720       0x28 permissions.o
+ .toc           0xbaadcafe00018748       0x30 sm_ext.o
+ .toc           0xbaadcafe00018778       0x10 ../lv2/src/interrupt_c.o
+ .toc           0xbaadcafe00018788       0x18 ../lv2/src/libc_c.o
+ .toc           0xbaadcafe000187a0       0x28 ../lv2/src/thread_c.o
+ .toc           0xbaadcafe000187c8       0x28 ../lv2/src/modules_c.o
+                                         0x38 (size before relaxing)
+ .toc           0xbaadcafe000187f0       0x18 ../lv2/src/pad.o
+ .toc           0xbaadcafe00018808       0x18 ../lv1/src/stor.o
+ .toc           0xbaadcafe00018820       0x20 ../lv1/src/device.o
+ .toc           0xbaadcafe00018840       0xc0 ../debug/src/debug.o
+                                         0xe0 (size before relaxing)
+ .toc           0xbaadcafe00018900       0x48 ../debug/src/printf.o
+ *(.toc.*)
+                0xbaadcafe00018948                __toc_end = .
+                0xbaadcafe00018948                __opd_start = .
+
+.opd            0xbaadcafe00018948     0x12c0
+ *(.opd)
+ .opd           0xbaadcafe00018948      0x1e0 ps3mapi_core.o
+                0xbaadcafe00018a98                ps3mapi_get_process_mem
+                0xbaadcafe00018948                ps3mapi_internal_get_process_by_pid
+                0xbaadcafe00018a50                ps3mapi_get_current_process_critical
+                0xbaadcafe00018b10                ps3mapi_get_idps
+                0xbaadcafe00018960                ps3mapi_check_syscall
+                0xbaadcafe00018a20                ps3mapi_get_process_name_by_pid
+                0xbaadcafe000189f0                ps3mapi_get_fw_type
+                0xbaadcafe00018978                ps3mapi_disable_syscall
+                0xbaadcafe00018a68                ps3mapi_get_current_process
+                0xbaadcafe00018ac8                ps3mapi_get_process_module_name_by_prx_id
+                0xbaadcafe00018af8                ps3mapi_load_process_modules
+                0xbaadcafe000189c0                ps3mapi_get_psid
+                0xbaadcafe00018a08                ps3mapi_get_all_processes_pid
+                0xbaadcafe00018ab0                ps3mapi_get_all_process_modules_prx_id
+                0xbaadcafe000189a8                ps3mapi_set_psid
+                0xbaadcafe00018ae0                ps3mapi_get_process_module_filename_by_prx_id
+                0xbaadcafe00018a80                ps3mapi_set_process_mem
+                0xbaadcafe00018990                ps3mapi_set_idps
+                0xbaadcafe00018a38                ps3mapi_get_process_by_pid
+                0xbaadcafe000189d8                ps3mapi_unload_process_modules
+ .opd           0xbaadcafe00018b28      0x1b0 main.o
+                0xbaadcafe00018ba8                syscall8
+                0xbaadcafe00018b58                sys_cfw_poke
+                0xbaadcafe00018b98                sys_cfw_lv1_peek
+                0xbaadcafe00018c90                _sys_cfw_lv1_poke
+                0xbaadcafe00018bb8                _sys_cfw_lv1_call
+                0xbaadcafe00018b38                sys_cfw_new_poke
+                0xbaadcafe00018c78                _sys_cfw_memcpy
+                0xbaadcafe00018b88                sys_cfw_lv2_func
+                0xbaadcafe00018bd0                _sys_cfw_lv2_func
+                0xbaadcafe00018cc0                _syscall8
+                0xbaadcafe00018c00                main
+                0xbaadcafe00018c30                _sys_cfw_new_poke
+                0xbaadcafe00018c18                _sys_cfw_poke
+                0xbaadcafe00018b48                sys_cfw_memcpy
+                0xbaadcafe00018be8                _sys_cfw_peek
+                0xbaadcafe00018b78                sys_cfw_lv1_call
+                0xbaadcafe00018b68                sys_cfw_lv1_poke
+                0xbaadcafe00018ca8                _sys_cfw_lv1_peek
+                0xbaadcafe00018b28                sys_cfw_peek
+ .opd           0xbaadcafe00018cd8       0x30 crypto.o
+                0xbaadcafe00018cf0                xtea_ctr
+ .opd           0xbaadcafe00018d08      0x220 modulespatch.o
+                0xbaadcafe00018d38                pre_map_process_memory
+                0xbaadcafe00018d90                _create_process_common_hooked_pre
+                0xbaadcafe00018e68                _create_process_common_hooked
+                0xbaadcafe00018df0                sys_prx_unload_vsh_plugin
+                0xbaadcafe00018e38                bc_to_net
+                0xbaadcafe00018d08                post_lv1_call_99_wrapper
+                0xbaadcafe00018d28                pre_modules_verification
+                0xbaadcafe00018dd8                prx_unload_vsh_plugin
+                0xbaadcafe00018e50                _post_lv1_call_99_wrapper
+                0xbaadcafe00018e98                ps3mapi_unload_vsh_plugin
+                0xbaadcafe00018e20                load_boot_plugins
+                0xbaadcafe00018da8                _load_process_hooked
+                0xbaadcafe00018e80                sys_prx_load_vsh_plugin
+                0xbaadcafe00018e08                prx_load_vsh_plugin
+                0xbaadcafe00018ef8                _pre_map_process_memory
+                0xbaadcafe00018d78                _pre_modules_verification
+                0xbaadcafe00018ec8                unhook_all_modules
+                0xbaadcafe00018d58                create_process_common_hooked
+                0xbaadcafe00018d18                modules_patching
+                0xbaadcafe00018d48                load_process_hooked
+                0xbaadcafe00018d68                create_process_common_hooked_pre
+                0xbaadcafe00018ee0                modules_patch_init
+                0xbaadcafe00018f10                _modules_patching
+                0xbaadcafe00018eb0                ps3mapi_get_vsh_plugin_info
+                0xbaadcafe00018dc0                read_text_line
+ .opd           0xbaadcafe00018f28       0x90 config.o
+                0xbaadcafe00018f58                write_cobra_config
+                0xbaadcafe00018f70                sys_write_cobra_config
+                0xbaadcafe00018f88                read_cobra_config
+                0xbaadcafe00018fa0                sys_read_cobra_config
+ .opd           0xbaadcafe00018fb8       0x30 drm.o
+                0xbaadcafe00018fd0                drm_init
+                0xbaadcafe00018fb8                sys_drm_get_data
+ .opd           0xbaadcafe00018fe8      0x110 mappath.o
+                0xbaadcafe00019068                map_path
+                0xbaadcafe00019080                map_path_user
+                0xbaadcafe00019020                unhook_all_map_path
+                0xbaadcafe00018ff8                open_path_hook
+                0xbaadcafe00019098                _sys_map_path
+                0xbaadcafe000190c8                sys_aio_copy_root
+                0xbaadcafe000190e0                _open_path_hook
+                0xbaadcafe00019008                map_path_patches
+                0xbaadcafe00018fe8                sys_map_path
+                0xbaadcafe000190b0                sys_map_paths
+ .opd           0xbaadcafe000190f8      0x660 storage_ext.o
+                0xbaadcafe00019440                process_cd_iso_scsi_cmd
+                0xbaadcafe000194e8                find_file_sector
+                0xbaadcafe000195a8                _device_event
+                0xbaadcafe00019578                is_psx
+                0xbaadcafe00019590                process_disc_insert
+                0xbaadcafe000192d8                _fsloop_close
+                0xbaadcafe000191a8                shutdown_copy_params_patched
+                0xbaadcafe00019710                _emu_sys_storage_async_send_device_command
+                0xbaadcafe00019168                emu_storage_send_device_command
+                0xbaadcafe00019278                do_read_iso
+                0xbaadcafe00019698                sys_storage_ext_mount_discfile_proxy
+                0xbaadcafe00019158                emu_sys_storage_async_read
+                0xbaadcafe000193f8                mount_ps2_discfile
+                0xbaadcafe00019380                mount_dvd_discfile
+                0xbaadcafe000194a0                _emu_storage_send_device_command
+                0xbaadcafe000196f8                _emu_sys_storage_async_read
+                0xbaadcafe00019500                process_proxy_cmd
+                0xbaadcafe00019410                mount_psx_discfile
+                0xbaadcafe000193e0                mount_ps_cd
+                0xbaadcafe00019128                emu_read_bdvd2
+                0xbaadcafe000190f8                device_event
+                0xbaadcafe00019668                sys_storage_ext_mount_psx_discfile
+                0xbaadcafe000191b8                fsloop_open
+                0xbaadcafe00019308                umount_discfile
+                0xbaadcafe00019218                storage_ext_init
+                0xbaadcafe00019350                mount_bd_discfile
+                0xbaadcafe00019118                emu_read_bdvd1
+                0xbaadcafe00019198                post_cellFsUtilMount
+                0xbaadcafe000196b0                sys_storage_ext_mount_encrypted_image
+                0xbaadcafe00019518                read_psx_sector
+                0xbaadcafe00019368                sys_storage_ext_mount_bd_discfile
+                0xbaadcafe00019290                _emu_read_bdvd2
+                0xbaadcafe00019548                process_read_disc_cmd
+                0xbaadcafe00019230                _post_storage_get_device_info
+                0xbaadcafe00019320                sys_storage_ext_umount_discfile
+                0xbaadcafe000193c8                sys_storage_ext_mount_ps3_discfile
+                0xbaadcafe000191c8                fsloop_close
+                0xbaadcafe00019188                emu_disc_auth
+                0xbaadcafe000193b0                mount_ps3_discfile
+                0xbaadcafe000192c0                _fsloop_read
+                0xbaadcafe00019740                _emu_disc_auth
+                0xbaadcafe00019728                _shutdown_copy_params_patched
+                0xbaadcafe00019470                copy_emus
+                0xbaadcafe000194d0                _emu_read_bdvd0
+                0xbaadcafe000195c0                process_fake_storage_event_cmd
+                0xbaadcafe00019650                sys_storage_ext_get_emu_state
+                0xbaadcafe00019458                process_cmd
+                0xbaadcafe00019530                process_get_psx_video_mode
+                0xbaadcafe00019138                post_storage_get_device_info
+                0xbaadcafe00019108                emu_read_bdvd0
+                0xbaadcafe000194b8                _emu_storage_read
+                0xbaadcafe00019398                sys_storage_ext_mount_dvd_discfile
+                0xbaadcafe00019638                sys_storage_ext_read_ps3_disc
+                0xbaadcafe00019620                sys_storage_ext_get_disc_type
+                0xbaadcafe00019178                emu_sys_storage_async_send_device_command
+                0xbaadcafe000195f0                _post_cellFsUtilMount
+                0xbaadcafe000196e0                storage_ext_patches
+                0xbaadcafe000196c8                unhook_all_storage_ext
+                0xbaadcafe00019608                dispatch_thread_entry
+                0xbaadcafe00019680                sys_storage_ext_mount_ps2_discfile
+                0xbaadcafe00019428                process_generic_iso_scsi_cmd
+                0xbaadcafe00019260                sys_storage_ext_fake_storage_event
+                0xbaadcafe00019148                emu_storage_read
+                0xbaadcafe000192a8                _emu_read_bdvd1
+                0xbaadcafe000191d8                fsloop_read
+                0xbaadcafe000192f0                _fsloop_open
+                0xbaadcafe00019338                mount_common
+ .opd           0xbaadcafe00019758       0x58 region.o
+                0xbaadcafe00019758                region_func
+                0xbaadcafe00019798                region_patches
+                0xbaadcafe00019780                _region_func
+                0xbaadcafe00019768                unhook_all_region
+ .opd           0xbaadcafe000197b0       0xd8 psp.o
+                0xbaadcafe000197c8                sys_psp_sony_bug
+                0xbaadcafe00019828                sys_psp_read_umd
+                0xbaadcafe00019858                sys_psp_set_decrypt_options
+                0xbaadcafe00019810                sys_psp_read_header
+                0xbaadcafe00019870                sys_psp_prx_patch
+                0xbaadcafe000197f8                sys_psp_post_savedata_initstart
+                0xbaadcafe00019840                sys_psp_set_umdfile
+                0xbaadcafe000197e0                sys_psp_post_savedata_shutdownstart
+                0xbaadcafe000197b0                sys_psp_set_emu_path
+ .opd           0xbaadcafe00019888       0x70 permissions.o
+                0xbaadcafe000198c8                sys_permissions_remove_access
+                0xbaadcafe00019898                _get_pid_patched
+                0xbaadcafe000198e0                sys_permissions_get_access
+                0xbaadcafe000198b0                permissions_patches
+                0xbaadcafe00019888                get_pid_patched
+ .opd           0xbaadcafe000198f8       0x40 sm_ext.o
+                0xbaadcafe00019908                sys_sm_ext_send_poweroff_event
+                0xbaadcafe000198f8                send_poweroff_event
+                0xbaadcafe00019920                _send_poweroff_event
+ .opd           0xbaadcafe00019938       0x30 ../lv2/src/interrupt_c.o
+                0xbaadcafe00019938                spin_unlock_irqrestore
+                0xbaadcafe00019950                spin_lock_irqsave
+ .opd           0xbaadcafe00019968       0x30 ../lv2/src/libc_c.o
+                0xbaadcafe00019968                strncasecmp
+                0xbaadcafe00019980                strstr
+ .opd           0xbaadcafe00019998       0x18 ../lv2/src/thread_c.o
+                0xbaadcafe00019998                ppu_user_thread_create
+ .opd           0xbaadcafe000199b0       0x30 ../lv2/src/modules_c.o
+                0xbaadcafe000199c8                prx_start_module_with_thread
+                0xbaadcafe000199b0                prx_stop_module_with_thread
+ .opd           0xbaadcafe000199e0       0x18 ../lv2/src/pad.o
+                0xbaadcafe000199e0                pad_get_data
+ .opd           0xbaadcafe000199f8       0x48 ../lv1/src/stor.o
+                0xbaadcafe00019a10                lv1_stor_wrapper_close
+                0xbaadcafe00019a28                lv1_stor_wrapper_open
+                0xbaadcafe000199f8                lv1_stor_wrapper_read
+ .opd           0xbaadcafe00019a40       0x78 ../lv1/src/device.o
+                0xbaadcafe00019a88                unmap_dma_mem
+                0xbaadcafe00019a58                find_device_by_type
+                0xbaadcafe00019aa0                map_dma_mem
+ .opd           0xbaadcafe00019ab8      0x108 ../debug/src/debug.o
+                0xbaadcafe00019ab8                ttyWrite
+                0xbaadcafe00019b48                _consoleWrite
+                0xbaadcafe00019b30                fatal
+                0xbaadcafe00019b00                debug_print
+                0xbaadcafe00019b18                _debug_printf
+                0xbaadcafe00019ba8                debug_install
+                0xbaadcafe00019b90                debug_init
+                0xbaadcafe00019b60                _ttyWrite
+                0xbaadcafe00019ad8                debug_printf
+                0xbaadcafe00019ac8                consoleWrite
+ .opd           0xbaadcafe00019bc0       0x48 ../debug/src/printf.o
+                0xbaadcafe00019bf0                _vsnprintf
+ *(.opd.*)
+                0xbaadcafe00019c08                __opd_end = .
+                0xbaadcafe00019c08                __reloc_end = .
+                0xbaadcafe00019c08                __self_end = .
+
+.rela.dyn       0xbaadcafe00019c08        0x0
+ .rela.start    0x0000000000000000        0x0 linker stubs
+ .rela.toc      0x0000000000000000        0x0 linker stubs
+ .rela.text     0x0000000000000000        0x0 linker stubs
+OUTPUT(stage2.elf elf64-powerpc)
+LOAD linker stubs
+
+.comment        0x0000000000000000      0x1c2
+ .comment       0x0000000000000000       0x12 ps3mapi_core.o
+ .comment       0x0000000000000012       0x12 main.o
+ .comment       0x0000000000000024       0x12 crypto.o
+ .comment       0x0000000000000036       0x12 modulespatch.o
+ .comment       0x0000000000000048       0x12 config.o
+ .comment       0x000000000000005a       0x12 drm.o
+ .comment       0x000000000000006c       0x12 mappath.o
+ .comment       0x000000000000007e       0x12 storage_ext.o
+ .comment       0x0000000000000090       0x12 region.o
+ .comment       0x00000000000000a2       0x12 psp.o
+ .comment       0x00000000000000b4       0x12 cobra.o
+ .comment       0x00000000000000c6       0x12 permissions.o
+ .comment       0x00000000000000d8       0x12 sm_ext.o
+ .comment       0x00000000000000ea       0x12 ../lv2/src/interrupt_c.o
+ .comment       0x00000000000000fc       0x12 ../lv2/src/libc_c.o
+ .comment       0x000000000000010e       0x12 ../lv2/src/memory_c.o
+ .comment       0x0000000000000120       0x12 ../lv2/src/thread_c.o
+ .comment       0x0000000000000132       0x12 ../lv2/src/modules_c.o
+ .comment       0x0000000000000144       0x12 ../lv2/src/pad.o
+ .comment       0x0000000000000156       0x12 ../lv1/src/stor.o
+ .comment       0x0000000000000168       0x12 ../lv1/src/device.o
+ .comment       0x000000000000017a       0x12 laboratory.o
+ .comment       0x000000000000018c       0x12 ../debug/src/debug.o
+ .comment       0x000000000000019e       0x12 ../debug/src/printf.o
+ .comment       0x00000000000001b0       0x12 ../debug/src/debug_util.o
